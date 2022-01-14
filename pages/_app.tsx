@@ -2,10 +2,11 @@ import '../styles/globals.css';
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Navbar } from '../components/navbar';
+import { Footer } from '../components/footer';
 
 function App({ Component, pageProps }: AppProps) {
     return (
-        <>
+        <div className="flex flex-col min-h-screen">
             <Head>
                 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
@@ -22,7 +23,9 @@ function App({ Component, pageProps }: AppProps) {
             <div className="max-w-screen-md mx-auto">
                 <Component {...pageProps} />
             </div>
-        </>
+            <div className="grow"></div>
+            <Footer />
+        </div>
     );
 }
 
