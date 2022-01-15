@@ -6,7 +6,7 @@ import { Footer } from '../components/footer';
 
 function App({ Component, pageProps }: AppProps) {
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen dark:bg-zinc-900 dark:text-white">
             <Head>
                 <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
                 <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
@@ -16,14 +16,18 @@ function App({ Component, pageProps }: AppProps) {
                 <link rel="shortcut icon" href="/favicon/favicon.ico" />
                 <meta name="msapplication-TileColor" content="#b91d47" />
                 <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
-                <meta name="theme-color" content="#ffffff" />
+                <meta name="theme-color" content="#27272a" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <title>RobotX</title>
             </Head>
             <Navbar />
-            <div className="max-w-screen-md mx-auto">
-                <Component {...pageProps} />
+            <span className="grow"></span>
+            <div className="max-w-xxs md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto">
+                <main id="main-content">
+                    <Component {...pageProps} />
+                </main>
             </div>
-            <div className="grow"></div>
+            <span className="grow"></span>
             <Footer />
         </div>
     );
