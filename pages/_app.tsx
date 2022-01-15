@@ -23,7 +23,7 @@ function App({ Component, pageProps }: AppProps) {
             <Navbar />
             <span className="grow"></span>
             <div className="max-w-xxs md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto">
-                <main id="main-content">
+                <main id="main-content" className="my-8">
                     <Component {...pageProps} />
                 </main>
             </div>

@@ -5,11 +5,11 @@ import Link from 'next/link';
 
 const NavbarLink = ({ href, text }: { href: string; text: string }) => {
     return (
-        <li className="px-2 rounded bg-zinc-700 md:bg-inherit">
+        <div className="px-2 rounded bg-zinc-700 md:bg-inherit">
             <Link href={href} passHref>
-                <a>{text}</a>
+                <a className="text-zinc-300 hover:text-white">{text}</a>
             </Link>
-        </li>
+        </div>
     );
 };
 
@@ -19,10 +19,10 @@ const Navbar = () => {
     return (
         <header className="w-screen mx-auto flex justify-center bg-zinc-800">
             <a
-                className="p-2 rounded-b bg-zinc-600 left-4 absolute -translate-y-10 transition-transform focus:translate-y-0 focus:outline-none"
+                className="p-2 rounded-b bg-zinc-600 left-4 absolute -translate-y-10 transition-transform focus:translate-y-0"
                 href="#main-content"
             >
-                Skip navigation
+                Skip to main content
             </a>
 
             <div className="max-w-xxs md:max-w-md lg:max-w-lg xl:max-w-xl flex-grow flex flex-col md:flex-row justify-between items-stretch green py-2 gap-4 text-white">
@@ -38,16 +38,16 @@ const Navbar = () => {
                     </button>
                 </div>
 
-                <ul
+                <nav
                     className={`${
                         hidden ? 'hidden md:flex' : 'flex'
-                    } flex-col md:flex-row items-stretch md:items-center gap-x-8 gap-y-2`}
+                    } flex-col md:flex-row items-stretch md:items-center gap-x-6 gap-y-2`}
                 >
                     <NavbarLink href="/team" text="Team" />
                     <NavbarLink href="/blog" text="Blog" />
                     <NavbarLink href="/seasons" text="Seasons" />
                     <NavbarLink href="/sponsors" text="Sponsors" />
-                </ul>
+                </nav>
             </div>
         </header>
     );

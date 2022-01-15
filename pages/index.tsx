@@ -2,8 +2,10 @@ import type { NextPage } from 'next';
 
 const Home: NextPage = () => {
     return (
-        <div className="flex flex-col gap-8 py-8">
-            <img src="/robotx.svg" alt="RobotX 6962" className="w-100" />
+        <div className="flex flex-col gap-8">
+            <h1>
+                <img src="/robotx.svg" alt="FRC Team 6962: RobotX" className="w-100" />
+            </h1>
             <p>
                 RobotX is a FRC team of aspiring, STEM passionate students. We&apos;re based in Khan
                 Lab School, in Mountain View, California where hands-on-learning and passion-driven
