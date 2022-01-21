@@ -2,12 +2,16 @@ import { Logo } from './logo';
 import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const NavbarLink = ({ href, text }: { href: string; text: string }) => {
+    const router = useRouter();
+    const isActive = router.pathname === href;
+
     return (
-        <div className="px-2 rounded bg-zinc-700 md:bg-inherit">
+        <div className="px-2 rounded background-accent md:bg-inherit">
             <Link href={href} passHref>
-                <a className="text-zinc-300 hover:text-white">{text}</a>
+                <a className={isActive ? 'text-accent' : 'hover:text-accent text'}>{text}</a>
             </Link>
         </div>
     );
@@ -17,25 +21,27 @@ const Navbar = () => {
     const [hidden, setHidden] = useState(true);
 
     return (
-        <header className="w-screen mx-auto flex justify-center bg-zinc-800">
+        <header className="w-screen flex justify-center background-accent">
             <a
-                className="p-2 rounded-b bg-zinc-600 left-4 absolute -translate-y-10 transition-transform focus:translate-y-0"
+                className="p-2 rounded-b background left-4 absolute -translate-y-10 transition-transform focus:translate-y-0"
                 href="#main-content"
             >
                 Skip to main content
             </a>
 
-            <div className="max-w-xxs md:max-w-md lg:max-w-lg xl:max-w-xl flex-grow flex flex-col md:flex-row justify-between items-stretch green py-2 gap-4 text-white">
-                <div className="flex flex-grow justify-between">
-                    <Link href="/" passHref>
-                        <a>
-                            <Logo className="h-8" />
-                        </a>
-                    </Link>
-
+            <div className="md:max-w-lg flex flex-grow flex-col md:flex-row justify-between items-stretch green p-2 gap-4">
+                <div className="grid grid-cols-3 md:flex justify-between">
                     <button className="md:hidden" onClick={() => setHidden(!hidden)}>
                         <FaBars size={24} />
                     </button>
+
+                    <div className="justify-self-center">
+                        <Link href="/" passHref>
+                            <a>
+                                <Logo className="h-8" />
+                            </a>
+                        </Link>
+                    </div>
                 </div>
 
                 <nav

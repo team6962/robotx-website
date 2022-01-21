@@ -3,8 +3,12 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Navbar } from '../components/navbar';
 import { Footer } from '../components/footer';
+import { useRouter } from 'next/router';
 
 function App({ Component, pageProps }: AppProps) {
+    const router = useRouter();
+    const isNotHome = router.pathname !== '/';
+
     return (
         <div className="flex flex-col min-h-screen dark:bg-zinc-900 dark:text-white">
             <Head>
@@ -20,12 +24,9 @@ function App({ Component, pageProps }: AppProps) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>RobotX</title>
             </Head>
-            <Navbar />
-            <span className="grow"></span>
-            <main
-                id="main-content"
-                className="max-w-xxs md:max-w-md lg:max-w-lg xl:max-w-xl mx-auto my-8"
-            >
+            {isNotHome && <Navbar />}
+            {isNotHome && <span className="grow"></span>}
+            <main id="main-content" className={`mx-auto text ${isNotHome ? 'my-8' : ''}`}>
                 <Component {...pageProps} />
             </main>
             <span className="grow"></span>

@@ -5,3 +5,33 @@
 html {
     scroll-behavior: smooth;
 }
+
+@media (prefers-color-scheme: dark) {
+    html {
+        background-color: rgb(39 39 42);
+    }
+}
+
+.background {
+    @apply bg-zinc-100 dark:bg-zinc-900;
+}
+
+.background-accent {
+    @apply bg-zinc-200 dark:bg-zinc-800;
+}
+
+.text {
+    @apply text-zinc-700 dark:text-zinc-300;
+}
+
+.text-accent {
+    @apply text-black dark:text-white;
+}
+
+.hover\:text {
+    @apply hover:text-zinc-700 hover:dark:text-zinc-300;
+}
+
+.hover\:text-accent {
+    @apply hover:text-black hover:dark:text-white;
+}
