@@ -29,9 +29,9 @@ html {
 }
 
 .hover\:text {
-    @apply hover:text-zinc-700 hover:dark:text-zinc-300;
+    @apply hover:text-zinc-700 hover:dark:text-zinc-300 transition-colors duration-200;
 }
 
 .hover\:text-accent {
-    @apply hover:text-black hover:dark:text-white;
+    @apply hover:text-black hover:dark:text-white transition-colors duration-200;
 }

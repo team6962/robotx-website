@@ -23,7 +23,7 @@ const Navbar = () => {
     return (
         <header className="w-screen flex justify-center background-accent">
             <a
-                className="p-2 rounded-b background left-4 absolute -translate-y-10 transition-transform focus:translate-y-0"
+                className="p-2 rounded-b bg-zinc-700 left-4 absolute -translate-y-10 transition-transform focus:translate-y-0"
                 href="#main-content"
             >
                 Skip to main content
