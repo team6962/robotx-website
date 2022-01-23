@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 
 const NavbarLink = ({ href, text }: { href: string; text: string }) => {
     const router = useRouter();
-    const isActive = router.pathname === href;
+    const isActive = router.pathname.startsWith(href);
 
     return (
         <div className="px-2 rounded background-accent md:bg-inherit">

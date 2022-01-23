@@ -1,19 +1,18 @@
 import type { NextPage } from 'next';
 import { ImageBackground } from '../components/imageBackground';
-import teamPhoto from '../images/team-home.jpeg';
+import teamPhoto from './home.jpeg';
 
-const Home: NextPage = () => {
-    return (
-        <div className="flex flex-col gap-4">
-            <ImageBackground
-                src={teamPhoto}
-                className="flex justify-center items-center"
-                imageClassName="h-[50vh]"
-            >
-                <p className="md:max-w-lg background rounded p-2">test test 12 13</p>
-            </ImageBackground>
-        </div>
-    );
-};
+const Home: NextPage = () => (
+    <div className="flex flex-col items-center gap-4">
+        <ImageBackground
+            src={teamPhoto}
+            className="flex justify-center items-center"
+            imageClassName="h-[50vh]"
+        ></ImageBackground>
+        <a href="/seasons/2022">View the current season</a>
+        <a href="/seasons/2022/team">Meet our team</a>
+        <a href="/sponsors">Learn about our sponsors</a>
+    </div>
+);
 
 export default Home;

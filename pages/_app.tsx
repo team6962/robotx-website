@@ -25,11 +25,9 @@ function App({ Component, pageProps }: AppProps) {
                 <title>RobotX</title>
             </Head>
             {isNotHome && <Navbar />}
-            {isNotHome && <span className="grow"></span>}
-            <main id="main-content" className={`mx-auto text ${isNotHome ? 'my-8' : ''}`}>
+            <main id="main-content" className="mx-auto text">
                 <Component {...pageProps} />
             </main>
-            <span className="grow"></span>
             <Footer />
         </div>
     );

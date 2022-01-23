@@ -2,8 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://p.typekit.net/p.css?s=1&k=tyx5gkx&ht=tk&f=37534&a=256866&app=typekit&e=css');
+
+@font-face {
+    font-family: 'titillium-web';
+    src: url('https://use.typekit.net/af/f10931/00000000000000007735c196/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+            format('woff2'),
+        url('https://use.typekit.net/af/f10931/00000000000000007735c196/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+            format('woff'),
+        url('https://use.typekit.net/af/f10931/00000000000000007735c196/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+            format('opentype');
+    font-display: auto;
+    font-style: normal;
+    font-weight: 400;
+}
+
 html {
     scroll-behavior: smooth;
+    font-family: 'titillium-web', sans-serif;
+    font-style: normal;
+    font-weight: 400;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -34,4 +52,12 @@ html {
 
 .hover\:text-accent {
     @apply hover:text-black hover:dark:text-white transition-colors duration-200;
+}
+
+.text-inverted {
+    @apply dark:text-zinc-700 text-zinc-300;
+}
+
+.text-accent-inverted {
+    @apply dark:text-black text-white;
 }
