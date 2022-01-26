@@ -26,7 +26,7 @@ html {
 
 @media (prefers-color-scheme: dark) {
     html {
-        background-color: rgb(39 39 42);
+        @apply background-accent;
     }
 }
 
@@ -47,11 +47,19 @@ html {
 }
 
 .hover\:text {
-    @apply hover:text-zinc-700 hover:dark:text-zinc-300 transition-colors duration-200;
+    @apply transition-colors duration-200;
+}
+.hover\:text:hover,
+.hover\:text:focus {
+    @apply text;
 }
 
 .hover\:text-accent {
-    @apply hover:text-black hover:dark:text-white transition-colors duration-200;
+    @apply transition-colors duration-200;
+}
+.hover\:text-accent:hover,
+.hover\:text-accent:focus {
+    @apply text-accent;
 }
 
 .text-inverted {
@@ -60,4 +68,17 @@ html {
 
 .text-accent-inverted {
     @apply dark:text-black text-white;
+}
+
+.button {
+    @apply p-2 rounded background-accent transition-colors duration-200;
+}
+
+.button:hover,
+.button:focus {
+    @apply text-accent;
+}
+
+.button:active {
+    @apply background;
 }

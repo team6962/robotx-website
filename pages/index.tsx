@@ -9,9 +9,36 @@ const Home: NextPage = () => (
             className="flex justify-center items-center"
             imageClassName="h-[50vh]"
         ></ImageBackground>
-        <a href="/seasons/2022">View the current season</a>
-        <a href="/seasons/2022/team">Meet our team</a>
-        <a href="/sponsors">Learn about our sponsors</a>
+        <p className="md:max-w-lg mx-6">
+            RobotX is a FRC team built of aspiring, STEM passionate students. We are based at the
+            Khan Lab School in Mountain View, California where hands-on-learning and passion-driven
+            work are encouraged. We aim to inspire and expose others to the exploration of science,
+            mathematics, computer science, and technology; represent our self-driven school in FRC
+            competitions; and share our experiences and knowledge with the rest of our community.
+        </p>
+        <a href={`/seasons/${new Date().getFullYear()}/team`} className="button">
+            Meet our team
+        </a>
+        <p className="md:max-w-lg mx-6">
+            RobotX is a FRC team built of aspiring, STEM passionate students. We are based at the
+            Khan Lab School in Mountain View, California where hands-on-learning and passion-driven
+            work are encouraged. We aim to inspire and expose others to the exploration of science,
+            mathematics, computer science, and technology; represent our self-driven school in FRC
+            competitions; and share our experiences and knowledge with the rest of our community.
+        </p>
+        <a href={`/seasons/${new Date().getFullYear()}`} className="button">
+            Keep up with the current season
+        </a>
+        <p className="md:max-w-lg mx-6">
+            RobotX is a FRC team built of aspiring, STEM passionate students. We are based at the
+            Khan Lab School in Mountain View, California where hands-on-learning and passion-driven
+            work are encouraged. We aim to inspire and expose others to the exploration of science,
+            mathematics, computer science, and technology; represent our self-driven school in FRC
+            competitions; and share our experiences and knowledge with the rest of our community.
+        </p>
+        <a href="/sponsors" className="button">
+            Learn about our sponsors
+        </a>
     </div>
 );
 
