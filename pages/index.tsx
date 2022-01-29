@@ -50,7 +50,7 @@ const Home: NextPage = () => (
             education to our members.
         </p>
         <Link href="/donate">
-            <a className="button">Learn about our donation</a>
+            <a className="button">Learn about donation</a>
         </Link>
     </div>
 );
