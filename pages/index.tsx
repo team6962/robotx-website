@@ -49,8 +49,8 @@ const Home: NextPage = () => (
             and we&apos;re always looking for people to support our mission of bringing robotics
             education to our members.
         </p>
-        <Link href="/sponsors">
-            <a className="button">Learn about our sponsors</a>
+        <Link href="/donate">
+            <a className="button">Learn about our donation</a>
         </Link>
     </div>
 );

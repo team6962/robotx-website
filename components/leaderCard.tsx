@@ -23,8 +23,9 @@ export const LeaderCard = ({
         />
         <div className="flex flex-col p-2 gap-2 items-center text-center">
             <p className="text-accent">{name}.</p>
-            <p className="text text-sm">{title}</p>
-            {mentor && <p className="text text-sm">Student Mentor</p>}
+            <p className="text text-sm">
+                {title} {mentor && 'Student Mentor'}
+            </p>
         </div>
     </div>
 );

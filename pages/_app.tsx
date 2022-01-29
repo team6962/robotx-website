@@ -22,6 +22,10 @@ function App({ Component, pageProps }: AppProps) {
                 <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
                 <meta name="theme-color" content="#27272a" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <meta
+                    name="description"
+                    content="FRC team 6969, RobotX is dedicated to bringing engineering and design experience and leadership skills to the students in our community."
+                />
                 <title>RobotX</title>
             </Head>
             {isNotHome && <Navbar />}

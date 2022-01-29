@@ -14,11 +14,11 @@ const Home: NextPage = () => (
             appreciate any and all contributions. If you would like to learn about corporate
             sponsorship for RobotX, please consult our{' '}
             <Link href="/sponsors">
-                <a className="text-link">Sponsors</a>
+                <a className="text-link">Sponsors page</a>
             </Link>{' '}
-            page.
+            .
         </p>
-        <a href="https://khanlabschool.square.site/" className="button">
+        <a href="https://khanlabschool.square.site/#wHgVCy" className="button">
             Donate
         </a>
         <div className="md:max-w-lg">

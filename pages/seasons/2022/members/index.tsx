@@ -54,23 +54,18 @@ const Home: NextPage = () => (
             <Card name="Sharanya N" title="Safety Captain" src={sharanyan} />
             <Card name="Ainsel F" title="Safety Captain" mentor src={ainself} />
             <Card name="Megan C" title="Design and Prototyping Lead" src={meganc} />
-            <Card name="Vivek P" title="Design and Prototyping Lead" mentor src={vivekp} />
+            <Card name="Vivek P" title="Design and Prototyping" mentor src={vivekp} />
             <Card name="Sophia M" title="Build and Testing Lead" src={sophiad} />
-            <Card name="Sylvan C" title="Build and Testing Lead" mentor src={sylvanc} />
+            <Card name="Sylvan C" title="Build and Testing" mentor src={sylvanc} />
             <Card name="Simon C" title="CAD Lead" src={simonc} />
             <Card name="Amartya I" title="Programming and Electronics Lead" src={amartyai} />
-            <Card name="Robert B" title="Programming and Electronics Lead" mentor src={robertb} />
+            <Card name="Robert B" title="Programming and Electronics" mentor src={robertb} />
             <Card name="Ishansh K" title="Programming Manager" src={ishanshk} />
             <Card name="Ananya K" title="Electronics Manager" src={ananyak} />
             <Card name="Timothy C" title="Business and Finance Lead" src={timothyc} />
             <Card name="Arjun C" title="Business and Finance Lead" mentor src={arjunc} />
-            <Card name="Sita V" title="Marketing and Communications Lead" src={sitav} />
-            <Card
-                name="Angelica Z"
-                title="Marketing and Communications Lead"
-                mentor
-                src={angelicaz}
-            />
+            <Card name="Sita V" title="Marketing and Communications" src={sitav} />
+            <Card name="Angelica Z" title="Marketing and Communications" mentor src={angelicaz} />
             <Card name="Aditi J" title="Communications and Outreach Manager" src={aditij} />
             <Card name="Jay W" title="Web Development Manager" src={jayw} />
             <Card name="Soren W" title="Web Development Manager" src={sorenw} />
