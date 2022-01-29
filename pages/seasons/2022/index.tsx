@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import { ImageBackground } from '../../../components/imageBackground';
-import teamPhoto from './team/team.jpeg';
+import teamPhoto from './members/team.jpeg';
 
 const Home: NextPage = () => (
     <div className="flex flex-col items-center gap-4">

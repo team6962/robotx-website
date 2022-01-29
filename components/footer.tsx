@@ -1,4 +1,4 @@
-import { FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaTwitter, FaInstagram, FaEnvelope } from 'react-icons/fa';
 
 const Footer = () => (
     <footer className="w-screen mx-auto mt-8 flex justify-center background-accent">
@@ -12,6 +12,9 @@ const Footer = () => (
                         size={24}
                         className="text hover:text-accent hover:cursor-pointer"
                     />
+                </a>
+                <a href="mailto:contact@team6962.com" target="_blank" rel="noreferrer">
+                    <FaEnvelope size={24} className="text hover:text-accent hover:cursor-pointer" />
                 </a>
             </div>
             <span className="text text-sm">

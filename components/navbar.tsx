@@ -49,7 +49,7 @@ const Navbar = () => {
                         hidden ? 'hidden md:flex' : 'flex'
                     } flex-col md:flex-row items-stretch md:items-center gap-x-6 gap-y-2`}
                 >
-                    <NavbarLink href={`/seasons/${new Date().getFullYear()}/team`} text="Team" />
+                    <NavbarLink href={`/seasons/${new Date().getFullYear()}/members`} text="Team" />
                     {/* <NavbarLink href="/blog" text="Blog" /> */}
                     <NavbarLink href="/seasons" text="Seasons" />
                     <NavbarLink href="/sponsors" text="Sponsors" />
