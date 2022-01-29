@@ -1,10 +1,10 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import { ImageBackground } from '../components/imageBackground';
-import teamPhoto from './home.jpeg';
+import teamPhoto from './home.jpg';
 
 const Home: NextPage = () => (
-    <div className="flex flex-col items-center gap-4">
+    <div className="content-container">
         <ImageBackground
             src={teamPhoto}
             className="flex justify-center items-center"
@@ -41,7 +41,7 @@ const Home: NextPage = () => (
             mission of bringing robotics education to our aspiring members.
         </p>
         <Link href="/sponsors">
-            <a className="button">Learn about donation</a>
+            <a className="button">Learn about our sponsors</a>
         </Link>
     </div>
 );

@@ -9,9 +9,11 @@ const SponsorshipLevel = ({
     condition: string;
     benefits: string[];
 }) => (
-    <div className="md:w-[16rem] px-6 md:px-0 flex flex-col gap-2 mt-2">
-        <span className="flex gap-2 self-center">
-            <h3>{name}</h3> <span className="before:content-['-']" /> <p>{condition}</p>
+    <div className="md:w-[20rem] px-6 md:px-0 flex flex-col gap-2 mt-2">
+        <span className="self-center flex gap-2">
+            <h3 className="text-lg">{name}</h3>
+            <span className="before:content-['-']" />
+            <p>{condition}</p>
         </span>
         <ul className="flex flex-col gap-1">
             {benefits.map((benefit) => (
@@ -22,7 +24,7 @@ const SponsorshipLevel = ({
 );
 
 const Home: NextPage = () => (
-    <div className="flex flex-col items-center gap-4">
+    <div className="content-container my-4">
         <p className="md:max-w-lg mx-6">
             At RobotX, our goal isn't just to win, but also to spread our passion for the fields of
             science, engineering, and math. This year we aim to raise $20,500 and we hope that you
@@ -33,9 +35,6 @@ const Home: NextPage = () => (
             receive rewards and updates on the team's progress and details on the robotics
             experience.
         </p>
-        <a href="https://khanlabschool.square.site/" className="button">
-            Donate
-        </a>
         <p className="md:max-w-lg mx-6">
             Our sponsors are featured prominently on our robot, website, team merchandise, and more.
             They are worn and brought to all events and competitions to be displayed for other
@@ -58,7 +57,7 @@ const Home: NextPage = () => (
             name="Xcellent"
             condition="Up to $100"
             benefits={[
-                'Website: Business Name ',
+                'Website: Business Name',
                 'Marketing Packet: Business Name',
                 'Thank You Letter and Gift'
             ]}
@@ -67,7 +66,7 @@ const Home: NextPage = () => (
             name="Xceptional"
             condition="Up to $500"
             benefits={[
-                'Website: Business Name ',
+                'Website: Business Name',
                 'Marketing Packet: Business Name',
                 'Marketing Video: Business Name',
                 'Thank You Letter and Gift'

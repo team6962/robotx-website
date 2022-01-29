@@ -82,3 +82,7 @@ html {
 .button:active {
     @apply background;
 }
+
+.content-container {
+    @apply flex flex-col items-center gap-4;
+}

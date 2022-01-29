@@ -25,9 +25,11 @@ function App({ Component, pageProps }: AppProps) {
                 <title>RobotX</title>
             </Head>
             {isNotHome && <Navbar />}
+            <span className="grow" />
             <main id="main-content" className="mx-auto text">
                 <Component {...pageProps} />
             </main>
+            <span className="grow" />
             <Footer />
         </div>
     );
