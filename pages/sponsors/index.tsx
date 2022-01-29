@@ -16,8 +16,8 @@ const SponsorshipLevel = ({
             <p>{condition}</p>
         </span>
         <ul className="flex flex-col gap-1">
-            {benefits.map((benefit) => (
-                <li>{benefit}</li>
+            {benefits.map((benefit, i) => (
+                <li key={i}>{benefit}</li>
             ))}
         </ul>
     </div>
@@ -26,14 +26,14 @@ const SponsorshipLevel = ({
 const Home: NextPage = () => (
     <div className="content-container my-4">
         <p className="md:max-w-lg mx-6">
-            At RobotX, our goal isn't just to win, but also to spread our passion for the fields of
-            science, engineering, and math. This year we aim to raise $20,500 and we hope that you
-            can assist us in meeting this goal. Your tax-deductible contribution will go not only
-            towards directly funding our team, but also symbolize your support for the long-term
-            investment in young and aspiring students. We would also appreciate in-kind donations,
-            such as access to workshops, tools, or other goods and services. Additionally, sponsors
-            receive rewards and updates on the team's progress and details on the robotics
-            experience.
+            At RobotX, our goal isn&apos;t just to win, but also to spread our passion for the
+            fields of science, engineering, and math. This year we aim to raise $20,500 and we hope
+            that you can assist us in meeting this goal. Your tax-deductible contribution will go
+            not only towards directly funding our team, but also symbolize your support for the
+            long-term investment in young and aspiring students. We would also appreciate in-kind
+            donations, such as access to workshops, tools, or other goods and services.
+            Additionally, sponsors receive rewards and updates on the team&apos;s progress and
+            details on the robotics experience.
         </p>
         <p className="md:max-w-lg mx-6">
             Our sponsors are featured prominently on our robot, website, team merchandise, and more.
@@ -48,6 +48,9 @@ const Home: NextPage = () => (
             </a>
             .
         </p>
+        <a href="/2022 RobotX Sponsor Packet.pdf" className="button">
+            2022 Sponsor Information Packet
+        </a>
         <p className="md:max-w-lg mx-6">
             RobotX is a student club of Khan Lab School, a 501(c)(3) organization. Donations may be
             made to Khan Lab School with a designation for RobotX, Team 6962.
