@@ -86,3 +86,7 @@ html {
 .content-container {
     @apply flex flex-col items-center gap-4;
 }
+
+.text-link {
+    @apply text-blue-400 /* dark:text-blue-600 */;
+}

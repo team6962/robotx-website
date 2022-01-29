@@ -31,6 +31,7 @@ const Home: NextPage = () => (
             src={teamPhoto}
             className="flex justify-center items-center"
             imageClassName="h-[50vh]"
+            alt="Our team photo"
         >
             {/* <p className="md:max-w-lg background text-lg font-semibold rounded p-2">
                 Meet Our 2022 Team

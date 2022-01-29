@@ -27,23 +27,23 @@ const Home: NextPage = () => (
     <div className="content-container my-4">
         <p className="md:max-w-lg mx-6">
             At RobotX, our goal isn&apos;t just to win, but also to spread our passion for the
-            fields of science, engineering, and math. This year we aim to raise $20,500 and we hope
-            that you can assist us in meeting this goal. Your tax-deductible contribution will go
-            not only towards directly funding our team, but also symbolize your support for the
-            long-term investment in young and aspiring students. We would also appreciate in-kind
-            donations, such as access to workshops, tools, or other goods and services.
-            Additionally, sponsors receive rewards and updates on the team&apos;s progress and
-            details on the robotics experience.
+            fields of science, engineering, and math to the students in our community. This year we
+            aim to raise $20,500 and we hope that you can assist us in meeting this goal. Your
+            tax-deductible contribution will go not only towards directly funding our team, but also
+            symbolize your support for the long-term investment in our students. We would also
+            appreciate in-kind donations, such as access to workshops, tools, or other goods and
+            services. Additionally, sponsors receive rewards (see below) and updates on the
+            team&apos;s progress and details on the robotics experience.
         </p>
         <p className="md:max-w-lg mx-6">
             Our sponsors are featured prominently on our robot, website, team merchandise, and more.
-            They are worn and brought to all events and competitions to be displayed for other
-            peers, teams, and judges to view.
+            They are worn and brought to all events and competitions for peers, other teams,
+            spectators, and judges to view.
         </p>
         <p className="md:max-w-lg mx-6">
             We are always looking for sponsors to support our team and to help us grow. If you, as
             an organization, are interested in becoming a sponsor, feel free get in touch with us at{' '}
-            <a href="mailto:contact@team6962.com" className="text-blue-500">
+            <a href="mailto:contact@team6962.com" className="text-link">
                 contact@team6962.com
             </a>
             .
