@@ -21,6 +21,7 @@ import simonc from './portraits/simonc.jpg';
 import sitav from './portraits/sitav.jpg';
 import sophiad from './portraits/sophiad.jpg';
 import sorenw from './portraits/sorenw.jpg';
+import sreev from './portraits/sreev.jpg';
 import sylvanc from './portraits/sylvanc.jpg';
 import timothyc from './portraits/timothyc.jpg';
 import vivekp from './portraits/vivekp.jpg';
@@ -50,7 +51,8 @@ const Home: NextPage = () => (
             <Card name="Angelica Z" title="Team Captain" src={angelicaz} />
             <Card name="Timothy C" title="Team Captain" src={timothyc} />
             <Card name="Pooja P" title="Operations Lead" src={poojap} />
-            <Card name="Alisha F" title="Inventory and Tools Manager" src={alishaf} />
+            <Card name="Alisha F" title="Inventory Manager" src={alishaf} />
+            <Card name="Sree V" title="Tools Manager" src={sreev} />
             <Card name="Sharanya N" title="Safety Captain" src={sharanyan} />
             <Card name="Ainsel F" title="Safety Captain" mentor src={ainself} />
             <Card name="Megan C" title="Design and Prototyping Lead" src={meganc} />
@@ -72,7 +74,7 @@ const Home: NextPage = () => (
             <Card name="Arjun C" title="Awards Manager" src={arjunc} />
         </div>
         <p>Our Team</p>
-        <div className="md:max-w-lg mx-6 grid grid-cols-5 gap-x-4">
+        <div className="max-w-lg mx-6 grid grid-cols-fill gap-x-4">
             <p>Adam S.</p>
             <p>Aditi J.</p>
             <p>Ainsel F.</p>
