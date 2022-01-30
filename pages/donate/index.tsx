@@ -28,6 +28,7 @@ const Home: NextPage = () => (
                 className="rounded"
                 priority
                 placeholder="blur"
+                alt="Our team coming together to test a prototype"
             ></Image>
         </div>
         <p className="md:max-w-lg mx-6">
