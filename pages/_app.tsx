@@ -24,7 +24,7 @@ function App({ Component, pageProps }: AppProps) {
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <meta
                     name="description"
-                    content="FRC team 6962, RobotX is dedicated to bringing engineering and design experience and leadership skills to the students in our community."
+                    content="FRC team 6962, RobotX, is dedicated to bringing engineering and design experience and leadership skills to the students in our community."
                 />
                 <title>RobotX</title>
             </Head>
