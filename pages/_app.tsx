@@ -3,11 +3,11 @@ import type { AppProps } from 'next/app';
 import Head from 'next/head';
 import { Navbar } from '../components/navbar';
 import { Footer } from '../components/footer';
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 
 function App({ Component, pageProps }: AppProps) {
-    const router = useRouter();
-    const isNotHome = router.pathname !== '/';
+    // const router = useRouter();
+    // const isNotHome = router.pathname !== '/';
 
     return (
         <div className="flex flex-col min-h-screen dark:bg-zinc-900 dark:text-white">
@@ -28,7 +28,8 @@ function App({ Component, pageProps }: AppProps) {
                 />
                 <title>RobotX</title>
             </Head>
-            {isNotHome && <Navbar />}
+            <Navbar />
+            {/* {isNotHome && } */}
             <span className="grow" />
             <main id="main-content" className="mx-auto text">
                 <Component {...pageProps} />
