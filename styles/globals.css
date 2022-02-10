@@ -90,3 +90,11 @@ html {
 .text-link {
     @apply text-blue-400 /* dark:text-blue-600 */;
 }
+
+.post {
+    @apply indent-8 flex flex-col gap-y-1;
+}
+
+.post a {
+    @apply text-link;
+}

@@ -4,7 +4,7 @@ import { ImageBackground } from '../components/imageBackground';
 import teamPhoto from './home.jpg';
 
 const Home: NextPage = () => (
-    <div className="content-container">
+    <div className="content-container mb-4">
         <ImageBackground
             src={teamPhoto}
             className="flex justify-center items-center"
