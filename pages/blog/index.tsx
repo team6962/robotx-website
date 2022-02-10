@@ -4,7 +4,7 @@ import { NextPage } from 'next';
 
 const Home: NextPage = () => <></>;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
 	const paths = (await getStaticPaths()).paths.sort((a, b) =>
 		compareDesc(
 			parse(a.params.post, 'yy-MM-dd', new Date()),
