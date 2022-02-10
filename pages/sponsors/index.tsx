@@ -9,12 +9,11 @@ const SponsorshipLevel = ({
     condition: string;
     benefits: string[];
 }) => (
-    <div className="md:w-[20rem] px-6 md:px-0 flex flex-col gap-2 mt-2">
-        <span className="self-center flex gap-2">
-            <h3 className="text-lg">{name}</h3>
-            <span className="before:content-['-']" />
+    <div className="w-[20rem] px-6 md:px-0 flex flex-col gap-2 mt-2">
+        <div className="flex justify-between content-end flex-wrap">
+            <h3 className="text-xl font-bold">{name}</h3>
             <p>{condition}</p>
-        </span>
+        </div>
         <ul className="flex flex-col gap-1">
             {benefits.map((benefit, i) => (
                 <li key={i}>{benefit}</li>
@@ -48,7 +47,7 @@ const Home: NextPage = () => (
             </a>
             .
         </p>
-        <a href="/2022 RobotX Sponsor Packet.pdf" className="button">
+        <a href="/assets/2022 RobotX Sponsor Packet.pdf" className="button">
             2022 Sponsor Information Packet
         </a>
         <p className="md:max-w-lg mx-6">
