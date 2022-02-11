@@ -3,6 +3,7 @@ import ReactMarkdown from 'react-markdown';
 import { readFileSync, readdirSync } from 'fs';
 import Link from 'next/link';
 import { format, parse, formatDistanceStrict, compareDesc, toDate } from 'date-fns';
+import { resolve } from 'path';
 
 const Home: NextPage<{
 	markdown: string;
@@ -59,8 +60,9 @@ const Home: NextPage<{
 };
 
 export async function getStaticPaths() {
+	const blogPath = resolve('./pages', 'blog');
 	return {
-		paths: readdirSync('pages/blog', {
+		paths: readdirSync(blogPath, {
 			withFileTypes: true
 		})
 			.filter((file) => file.isDirectory())
@@ -76,7 +78,8 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-	const posts = readdirSync('pages/blog', {
+	const blogPath = resolve('./pages', 'blog');
+	const posts = readdirSync(blogPath, {
 		withFileTypes: true
 	})
 		.filter((file) => file.isDirectory())
@@ -90,13 +93,18 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 
 	if (index === -1) return;
 
-	const json = JSON.parse(readFileSync(`pages/blog/${context.params!.post}/post.json`, 'utf8'));
+	const json = JSON.parse(
+		readFileSync(resolve(blogPath, context.params!.post as string, 'post.json'), 'utf8')
+	);
 	const next =
 		index > 0
 			? {
 					path: posts[index - 1].name,
 					date: JSON.parse(
-						readFileSync(`pages/blog/${posts[index - 1].name}/post.json`, 'utf8')
+						readFileSync(
+							resolve(blogPath, posts[index - 1].name as string, 'post.json'),
+							'utf8'
+						)
 					).date
 			  }
 			: null;
@@ -105,7 +113,10 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 			? {
 					path: posts[index + 1].name,
 					date: JSON.parse(
-						readFileSync(`pages/blog/${posts[index + 1].name}/post.json`, 'utf8')
+						readFileSync(
+							resolve(blogPath, posts[index + 1].name as string, 'post.json'),
+							'utf8'
+						)
 					).date
 			  }
 			: null;
@@ -114,7 +125,10 @@ export async function getStaticProps(context: GetStaticPropsContext) {
 		props: {
 			title: json.title,
 			date: json.date,
-			markdown: readFileSync(`pages/blog/${context.params!.post}/${json.file}`, 'utf8'),
+			markdown: readFileSync(
+				resolve(blogPath, context.params!.post as string, json.file),
+				'utf8'
+			),
 			next,
 			previous
 		}
