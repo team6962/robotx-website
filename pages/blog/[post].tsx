@@ -59,44 +59,37 @@ const Home: NextPage<{
 };
 
 export async function getStaticPaths() {
-	async function getPosts() {
-		const files = await readdir('pages/blog', {
-			withFileTypes: true
-		});
-
-		return files
+	return {
+		paths: (
+			await readdir('pages/blog', {
+				withFileTypes: true
+			})
+		)
 			.filter((file) => file.isDirectory())
 			.sort((a, b) =>
 				compareDesc(
 					parse(a.name, 'yy-MM-dd', new Date()),
 					parse(b.name, 'yy-MM-dd', new Date())
 				)
-			);
-	}
-
-	return {
-		paths: (await getPosts()).map((file) => ({ params: { post: file.name } })),
+			)
+			.map((file) => ({ params: { post: file.name } })),
 		fallback: false
 	};
 }
 
 export async function getStaticProps(context: GetStaticPropsContext) {
-	async function getPosts() {
-		const files = await readdir('pages/blog', {
+	const posts = (
+		await readdir('pages/blog', {
 			withFileTypes: true
-		});
-
-		return files
-			.filter((file) => file.isDirectory())
-			.sort((a, b) =>
-				compareDesc(
-					parse(a.name, 'yy-MM-dd', new Date()),
-					parse(b.name, 'yy-MM-dd', new Date())
-				)
-			);
-	}
-
-	const posts = await getPosts();
+		})
+	)
+		.filter((file) => file.isDirectory())
+		.sort((a, b) =>
+			compareDesc(
+				parse(a.name, 'yy-MM-dd', new Date()),
+				parse(b.name, 'yy-MM-dd', new Date())
+			)
+		);
 	const index = posts.findIndex((post) => post.name === context.params!.post);
 
 	if (index === -1) return;
