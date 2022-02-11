@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import { ImageBackground } from '../components/imageBackground';
-import teamPhoto from './home.jpg';
+import teamPhoto from './home2.png';
 
 const Home: NextPage = () => (
     <div className="content-container">
@@ -17,7 +17,7 @@ const Home: NextPage = () => (
             FIRST Robotics Competition (
             <a href="https://www.firstinspires.org/robotics/frc" className="text-link">
                 FRC
-            </a>
+            </a>   
             ) team 6962, RobotX, was founded in 2018 at{' '}
             <a href="https://www.khanlabschool.org/" className="text-link">
                 Khan Lab School

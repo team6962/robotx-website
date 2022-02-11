@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import { ImageBackground } from '../../../../components/imageBackground';
 import { LeaderCard as Card } from '../../../../components/leaderCard';
 
-import teamPhoto from './team.jpg';
+import teamPhoto from './team2.png';
 
 import aditij from './portraits/aditij.jpg';
 import ainself from './portraits/ainself.jpg';
@@ -75,6 +75,7 @@ const Home: NextPage = () => (
         </div>
         <p>Our Team</p>
         <div className="max-w-lg mx-6 grid grid-cols-fill gap-x-4">
+            <p>Aaryuj B.</p>
             <p>Adam S.</p>
             <p>Aditi J.</p>
             <p>Ainsel F.</p>
