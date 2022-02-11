@@ -12,7 +12,6 @@ export default function RobotX404() {
                         layout="intrinsic"
                         className="rounded"
                         priority 
-                        //  placeholder="blur"
                         alt="404 image"
                     />
                 </div>
