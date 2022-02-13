@@ -5,7 +5,7 @@ import {
 } from 'react-icons/fa';
 
 const Footer = () => (
-    <footer className="w-screen mx-auto mt-8 flex justify-center background-accent">
+    <footer className="w-screen mx-auto flex justify-center background-accent">
         <div className="max-w-xxs md:max-w-md lg:max-w-lg xl:max-w-xl flex-grow flex flex-col justify-between items-center green py-2 gap-1">
             <div className="flex gap-4">
                 <a
