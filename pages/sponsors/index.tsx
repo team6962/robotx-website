@@ -1,4 +1,6 @@
 import type { NextPage } from 'next';
+import powerPhoto from './home2.jpeg';
+import Image from 'next/image';
 
 const SponsorshipLevel = ({
     name,
@@ -35,6 +37,14 @@ const Home: NextPage = () => (
             services. Additionally, sponsors receive rewards (see below) and updates on the
             team&apos;s progress and details on the robotics experience.
         </p>
+        <div className='md:max-w-lg'>
+            <Image src={powerPhoto} 
+                    layout="intrinsic"
+                    className="rounded"
+                    priority
+                    placeholder="blur"
+                    alt='Student using power tools funded by sponsors.'/>
+        </div>
         <p className="md:max-w-lg mx-6">
             Our sponsors are featured prominently on our robot, website, team merchandise, and more.
             They are worn and brought to all events and competitions for peers, other teams,

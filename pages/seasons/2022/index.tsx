@@ -31,6 +31,14 @@ const Home: NextPage = () => (
         <Link href={`/seasons/${new Date().getFullYear()}/members`}>
             <a className="button">Meet our 2022 team</a>
         </Link>
+        <br/>
+        <br/>
+        <p>
+        <a className='button' href='https://robotx.smugmug.com/'>Click here for more photos</a>
+        <br/>
+        <br/>
+        <p className='text-center'>Password: klsrobotics</p>
+        </p>
     </div>
 );
 
