@@ -1,4 +1,5 @@
 import type { NextPage } from 'next';
+import { Logo } from '../../components/logo';
 
 const SponsorshipLevel = ({
     name,
@@ -11,6 +12,7 @@ const SponsorshipLevel = ({
 }) => (
     <div className="md:w-[20rem] px-6 md:px-0 flex flex-col gap-2 mt-2">
         <span className="self-center flex gap-2">
+            <Logo className="h-8"/>
             <h3 className="text-lg">{name}</h3>
             <span className="before:content-['-']" />
             <p>{condition}</p>
