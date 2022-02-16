@@ -1,14 +1,16 @@
 import type { NextPage } from 'next';
 import { XLogo } from '../../components/xLogo';
+import powerPhoto from './home2.jpeg';
+import Image from 'next/image';
 
 const SponsorshipLevel = ({
-    name,
-    condition,
-    benefits
+	name,
+	condition,
+	benefits
 }: {
-    name: string;
-    condition: string;
-    benefits: string[];
+	name: string;
+	condition: string;
+	benefits: string[];
 }) => (
     <div className="md:w-[20rem] px-6 md:px-0 flex flex-col gap-2 mt-2">
         <span className="self-center flex gap-2">
