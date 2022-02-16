@@ -1,5 +1,5 @@
 import type { NextPage } from 'next';
-import { Logo } from '../../components/logo';
+import { XLogo } from '../../components/xLogo';
 
 const SponsorshipLevel = ({
     name,
@@ -12,8 +12,8 @@ const SponsorshipLevel = ({
 }) => (
     <div className="md:w-[20rem] px-6 md:px-0 flex flex-col gap-2 mt-2">
         <span className="self-center flex gap-2">
-            <Logo className="h-8"/>
-            <h3 className="text-lg">{name}</h3>
+            
+            <h3 className="text-lg flex"><XLogo/>{name}</h3>
             <span className="before:content-['-']" />
             <p>{condition}</p>
         </span>
@@ -59,7 +59,7 @@ const Home: NextPage = () => (
         </p>
         <h2>Sponsorship Levels</h2>
         <SponsorshipLevel
-            name="Xcellent"
+            name="cellent"
             condition="Up to $100"
             benefits={[
                 'Website: Business Name',
@@ -68,7 +68,7 @@ const Home: NextPage = () => (
             ]}
         />
         <SponsorshipLevel
-            name="Xceptional"
+            name="ceptional"
             condition="Up to $500"
             benefits={[
                 'Website: Business Name',
@@ -78,7 +78,7 @@ const Home: NextPage = () => (
             ]}
         />
         <SponsorshipLevel
-            name="Xemplary"
+            name="emplary"
             condition="Up to $1000"
             benefits={[
                 'Website: Business Name and Small Logo',
@@ -88,7 +88,7 @@ const Home: NextPage = () => (
             ]}
         />
         <SponsorshipLevel
-            name="Xtraordinary"
+            name="traordinary"
             condition="Up to $2500"
             benefits={[
                 'Website: Business Name and Big Logo',
@@ -99,7 +99,7 @@ const Home: NextPage = () => (
             ]}
         />
         <SponsorshipLevel
-            name="Xtragalactic"
+            name="tragalactic"
             condition="Over $2500"
             benefits={[
                 'Website: Business Name and Big Logo',
