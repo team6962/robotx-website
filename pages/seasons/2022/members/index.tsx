@@ -27,7 +27,7 @@ import timothyc from './portraits/timothyc.jpg';
 import vivekp from './portraits/vivekp.jpg';
 
 const Home: NextPage = () => (
-	<div className="content-container">
+	<div className="content-container pb-4">
 		<ImageBackground
 			src={teamPhoto}
 			className="flex justify-center items-center"
