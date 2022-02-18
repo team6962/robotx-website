@@ -92,7 +92,7 @@ html {
 }
 
 .post {
-	@apply indent-8 flex flex-col gap-y-1;
+	@apply indent-8 flex flex-col gap-y-2;
 }
 
 .post a {

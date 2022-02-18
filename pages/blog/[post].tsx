@@ -38,12 +38,14 @@ const Home: NextPage<{
 					),
 					img: ({ src, ...props }) => (
 						<Image
+							{...props}
 							src={src!}
-							layout="intrinsic"
+							layout="responsive"
 							className="rounded"
 							priority
-							placeholder={'blur' as typeof Image.arguments['placeholder']}
-							{...props}
+							width={640}
+							height={360}
+							placeholder={undefined}
 						/>
 					)
 				}}
