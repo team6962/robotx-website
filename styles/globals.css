@@ -5,96 +5,96 @@
 @import url('https://p.typekit.net/p.css?s=1&k=tyx5gkx&ht=tk&f=37534&a=256866&app=typekit&e=css');
 
 @font-face {
-    font-family: 'titillium-web';
-    src: url('https://use.typekit.net/af/f10931/00000000000000007735c196/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
-            format('woff2'),
-        url('https://use.typekit.net/af/f10931/00000000000000007735c196/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
-            format('woff'),
-        url('https://use.typekit.net/af/f10931/00000000000000007735c196/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
-            format('opentype');
-    font-display: auto;
-    font-style: normal;
-    font-weight: 400;
+	font-family: 'titillium-web';
+	src: url('https://use.typekit.net/af/f10931/00000000000000007735c196/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+			format('woff2'),
+		url('https://use.typekit.net/af/f10931/00000000000000007735c196/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+			format('woff'),
+		url('https://use.typekit.net/af/f10931/00000000000000007735c196/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3')
+			format('opentype');
+	font-display: swap;
+	font-style: normal;
+	font-weight: 400;
 }
 
 html {
-    scroll-behavior: smooth;
-    font-family: 'titillium-web', sans-serif;
-    font-style: normal;
-    font-weight: 400;
+	scroll-behavior: smooth;
+	font-family: 'titillium-web', sans-serif;
+	font-style: normal;
+	font-weight: 400;
 }
 
 @media (prefers-color-scheme: dark) {
-    html {
-        @apply background-accent;
-    }
+	html {
+		@apply background-accent;
+	}
 }
 
 .background {
-    @apply bg-zinc-100 dark:bg-zinc-900;
+	@apply bg-zinc-100 dark:bg-zinc-900;
 }
 
 .background-accent {
-    @apply bg-zinc-200 dark:bg-zinc-800;
+	@apply bg-zinc-200 dark:bg-zinc-800;
 }
 
 .text {
-    @apply text-zinc-700 dark:text-zinc-300;
+	@apply text-zinc-700 dark:text-zinc-300;
 }
 
 .text-accent {
-    @apply text-black dark:text-white;
+	@apply text-black dark:text-white;
 }
 
 .hover\:text {
-    @apply transition-colors duration-200;
+	@apply transition-colors duration-200;
 }
 .hover\:text:hover,
 .hover\:text:focus {
-    @apply text;
+	@apply text;
 }
 
 .hover\:text-accent {
-    @apply transition-colors duration-200;
+	@apply transition-colors duration-200;
 }
 .hover\:text-accent:hover,
 .hover\:text-accent:focus {
-    @apply text-accent;
+	@apply text-accent;
 }
 
 .text-inverted {
-    @apply dark:text-zinc-700 text-zinc-300;
+	@apply dark:text-zinc-700 text-zinc-300;
 }
 
 .text-accent-inverted {
-    @apply dark:text-black text-white;
+	@apply dark:text-black text-white;
 }
 
 .button {
-    @apply p-2 rounded background-accent transition-colors duration-200;
+	@apply p-2 rounded background-accent transition-colors duration-200;
 }
 
 .button:hover,
 .button:focus {
-    @apply text-accent;
+	@apply text-accent;
 }
 
 .button:active {
-    @apply background;
+	@apply background;
 }
 
 .content-container {
-    @apply flex flex-col items-center gap-4;
+	@apply flex flex-col items-center gap-4;
 }
 
 .text-link {
-    @apply text-blue-400 /* dark:text-blue-600 */;
+	@apply text-blue-400 /* dark:text-blue-600 */;
 }
 
 .post {
-    @apply indent-8 flex flex-col gap-y-1;
+	@apply indent-8 flex flex-col gap-y-1;
 }
 
 .post a {
-    @apply text-link;
+	@apply text-link;
 }
