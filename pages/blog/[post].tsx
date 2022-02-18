@@ -1,9 +1,10 @@
+import { compareDesc, format, formatDistanceStrict, parse, toDate } from 'date-fns';
+import { readdirSync, readFileSync } from 'fs';
 import type { GetStaticPropsContext, NextPage } from 'next';
-import ReactMarkdown from 'react-markdown';
-import { readFileSync, readdirSync } from 'fs';
+import Image from 'next/image';
 import Link from 'next/link';
-import { format, parse, formatDistanceStrict, compareDesc, toDate } from 'date-fns';
 import { resolve } from 'path';
+import ReactMarkdown from 'react-markdown';
 
 const Home: NextPage<{
 	markdown: string;
@@ -30,13 +31,21 @@ const Home: NextPage<{
 			<ReactMarkdown
 				className="md:max-w-lg mx-6 post"
 				components={{
-					a: (props) => {
-						return (
-							<Link href={props.href!} passHref>
-								<a {...props} target="_blank" rel="noopener noreferrer" />
-							</Link>
-						);
-					}
+					a: ({ href, ...props }) => (
+						<Link href={href!} passHref>
+							<a {...props} target="_blank" rel="noopener noreferrer" />
+						</Link>
+					),
+					img: ({ src, ...props }) => (
+						<Image
+							src={src!}
+							layout="intrinsic"
+							className="rounded"
+							priority
+							placeholder={'blur' as typeof Image.arguments['placeholder']}
+							{...props}
+						/>
+					)
 				}}
 			>
 				{markdown}
