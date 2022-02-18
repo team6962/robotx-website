@@ -32,6 +32,9 @@ const Home: NextPage = () => (
             <a className="button">Meet our 2022 team</a>
         </Link>
         <br/>
+        <Link href="/blog/22-01-20">
+			<a className="button">Click here to visit our blog</a>
+		</Link>
         <br/>
         <p>
         <a className='button' href='https://robotx.smugmug.com/'>Click here for more photos</a>
