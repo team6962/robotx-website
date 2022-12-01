@@ -54,7 +54,7 @@ const Home: NextPage = () => (
 			</a>
 			.
 		</p>
-		<a href="/2022 RobotX Sponsor Packet.pdf" className="button">
+		<a href="https://drive.google.com/file/d/1_UwJn1oucedeik6CuBLqHbVcAlgxn5OI/view?usp=sharing" className="button">
 			2022 Sponsor Information Packet
 		</a>
 		<div className="md:max-w-lg">
@@ -73,52 +73,39 @@ const Home: NextPage = () => (
 		</p>
 		<h2>Sponsorship Levels</h2>
 		<SponsorshipLevel
-			name="cellent"
-			condition="Up to $100"
+			name="cellent (Bronze)"
+			condition="$500+"
 			benefits={[
+				'Marketing Materials: Business Name',
 				'Website: Business Name',
-				'Marketing Packet: Business Name',
 				'Thank You Letter and Gift'
 			]}
 		/>
 		<SponsorshipLevel
-			name="ceptional"
-			condition="Up to $500"
+			name="ceptional (Silver)"
+			condition="$2500+"
 			benefits={[
-				'Website: Business Name',
-				'Marketing Packet: Business Name',
-				'Marketing Video: Business Name',
+				'Marketing Materials: Business Name and Logo',
+				'Website: Business Name and Logo',
 				'Thank You Letter and Gift'
 			]}
 		/>
 		<SponsorshipLevel
-			name="emplary"
-			condition="Up to $1000"
+			name="traordinary (Gold)"
+			condition="$5000+"
 			benefits={[
-				'Website: Business Name and Small Logo',
-				'Marketing Packet: Business Name',
-				'Marketing Video: Business Name',
-				'Thank You Letter and Gift'
-			]}
-		/>
-		<SponsorshipLevel
-			name="traordinary"
-			condition="Up to $2500"
-			benefits={[
-				'Website: Business Name and Big Logo',
-				'Marketing Packet: Business Name',
-				'Marketing Video: Business Name',
+				'Marketing Materials: Business Name and Logo',
+				'Website: Business Name and Logo',
 				'Team Shirt: Logo',
 				'Thank You Letter and Gift'
 			]}
 		/>
 		<SponsorshipLevel
-			name="tragalactic"
-			condition="Over $2500"
+			name="tragalactic (Platinum)"
+			condition="$7500+"
 			benefits={[
-				'Website: Business Name and Big Logo',
-				'Marketing Packet: Business Name',
-				'Marketing Video: Business Name',
+				'Marketing Materials: Business Name and Logo',
+				'Website: Business Name and Logo',
 				'Team Shirt: Logo',
 				'Robot: Logo',
 				'Thank You Letter and Gift'
