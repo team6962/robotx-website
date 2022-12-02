@@ -54,7 +54,7 @@ const Home: NextPage = () => (
 			</a>
 			.
 		</p>
-		<a href="https://drive.google.com/file/d/1_UwJn1oucedeik6CuBLqHbVcAlgxn5OI/view?usp=sharing" className="button">
+		<a href="https://drive.google.com/file/d/1bUPFyM5eVC1SuRPrlnQR0eJ7Xt4ftccb/view?usp=sharing" className="button">
 			2022 Sponsor Information Packet
 		</a>
 		<div className="md:max-w-lg">
