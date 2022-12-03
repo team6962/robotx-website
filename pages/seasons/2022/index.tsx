@@ -40,7 +40,6 @@ const Home: NextPage = () => (
         <a className='button' href='https://robotx.smugmug.com/'>Click here for more photos</a>
         <br/>
         <br/>
-        <p className='text-center'>Password: klsrobotics</p>
         </p>
     </div>
 );
