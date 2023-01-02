@@ -69,7 +69,7 @@ const Home: NextPage = () => (
 		</div>
 		<p className="md:max-w-lg mx-6">
 			RobotX is a student club of Khan Lab School, a 501(c)(3) organization. Donations may be 
-			made to Khan Lab School with a designation for "RobotX, Team 6962".
+			made to Khan Lab School with a designation for &quot;RobotX, Team 6962&quot;.
 		</p>
 		<h2>Sponsorship Levels</h2>
 		<SponsorshipLevel
