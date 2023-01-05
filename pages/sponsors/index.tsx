@@ -73,20 +73,13 @@ const Home: NextPage = () => (
 		</p>
 		<h2>Sponsorship Levels</h2>
 		<SponsorshipLevel
-			name="cellent (Bronze)"
-			condition="$500+"
-			benefits={[
-				'Marketing Materials: Business Name',
-				'Website: Business Name',
-				'Thank You Letter and Gift'
-			]}
-		/>
-		<SponsorshipLevel
-			name="ceptional (Silver)"
-			condition="$2500+"
+			name="tragalactic (Platinum)"
+			condition="$7500+"
 			benefits={[
 				'Marketing Materials: Business Name and Logo',
 				'Website: Business Name and Logo',
+				'Team Shirt: Logo',
+				'Robot: Logo',
 				'Thank You Letter and Gift'
 			]}
 		/>
@@ -101,13 +94,20 @@ const Home: NextPage = () => (
 			]}
 		/>
 		<SponsorshipLevel
-			name="tragalactic (Platinum)"
-			condition="$7500+"
+			name="ceptional (Silver)"
+			condition="$2500+"
 			benefits={[
 				'Marketing Materials: Business Name and Logo',
 				'Website: Business Name and Logo',
-				'Team Shirt: Logo',
-				'Robot: Logo',
+				'Thank You Letter and Gift'
+			]}
+		/>
+		<SponsorshipLevel
+			name="cellent (Bronze)"
+			condition="$500+"
+			benefits={[
+				'Marketing Materials: Business Name',
+				'Website: Business Name',
 				'Thank You Letter and Gift'
 			]}
 		/>
