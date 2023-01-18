@@ -1,4 +1,4 @@
-import { Logo } from './logo';
+import { Icon } from './icon';
 import { useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import Link from 'next/link';
@@ -38,7 +38,7 @@ const Navbar = () => {
 					<div className="justify-self-center">
 						<Link href="/" passHref>
 							<a>
-								<Logo className="h-8" />
+								<Icon className="h-8" />
 							</a>
 						</Link>
 					</div>
