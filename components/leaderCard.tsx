@@ -9,7 +9,7 @@ export const LeaderCard = ({
 	name: string;
 	title: string;
 	mentor?: boolean;
-	src: string;
+	src: string | StaticImageData;
 }) => (
 	<div className="flex flex-col rounded-md background-accent">
 		<Image
