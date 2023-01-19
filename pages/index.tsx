@@ -2,6 +2,7 @@ import type { NextPage } from 'next';
 import Link from 'next/link';
 import { ImageBackground } from '../components/imageBackground';
 import teamPhoto from './home.png';
+import { Logo } from '../components/logo';
 
 const Home: NextPage = () => (
 	<div className="content-container pb-4">
@@ -11,7 +12,7 @@ const Home: NextPage = () => (
 			imageClassName="h-[50vh]"
 			alt="Our team photo"
 		>
-			<img src="/robotx.svg" alt="RobotX 6962" className="h-[20vh]" />
+			<Logo className="h-[20vh]" />
 		</ImageBackground>
 		<p className="md:max-w-lg mx-6">
 			FIRST Robotics Competition (
@@ -33,7 +34,7 @@ const Home: NextPage = () => (
 			Mountain View, California. Our team is a diverse group of STEM-passionate students,
 			motivated to learn and succeed.
 		</p>
-		<Link href={`/seasons/${new Date().getFullYear()}/members`}>
+		<Link href={`/seasons/2022/members`}>
 			<a className="button">Meet our team members</a>
 		</Link>
 		<p className="md:max-w-lg mx-6">
@@ -41,7 +42,7 @@ const Home: NextPage = () => (
 			workshops. After last season, we&apos;re back in full force to make this year our best
 			yet.
 		</p>
-		<Link href={`/seasons/${new Date().getFullYear()}`}>
+		<Link href={`/seasons/2022`}>
 			<a className="button">Keep up with the current season</a>
 		</Link>
 		<p className="md:max-w-lg mx-6">
