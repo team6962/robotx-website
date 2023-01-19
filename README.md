@@ -1,22 +1,31 @@
-## Developing
+<p align="center">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  </a>
+</p>
 
-First, run the development server:
+## 🚀 Local Development
 
-```bash
-npm run dev
-```
+1.  **install required tools**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    This site is built with node.js. Ensure you have at least v.18.13.0 installed.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+2.  **install dependencies**
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+    Navigate to this folder and run `npm install`.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3.  **authenticate**
 
-## Learn More
+    Sign in to Contentful and navigate to [settings > api keys > Website Main](https://app.contentful.com/spaces/bliez1sb04y6/api/keys/5TnEk5nITWXjMfU8CL3shi). Make a copy of `.env.template` as `.env` and copy the Contentful keys into that file. These are sensitive! Do not share them outside of RobotX.
 
-To learn more about Next.js, take a look at the following resources:
+4.  **develop!**
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+    You are now ready to begin local development. Run `npm run develop` to get started.
+
+## 📚 Useful References
+
+-   [Gatsby Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
+
+-   [Contentful Documentation](https://www.contentful.com/developers/docs/)
+
+-   [RobotX Drive](https://drive.google.com/drive/u/1/folders/0ALyfIiWziIgnUk9PVA)
