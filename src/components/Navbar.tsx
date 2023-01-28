@@ -1,6 +1,8 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 
+import * as styles from './Navbar.module.css';
+
 export const Navbar: React.FC = () => {
 	const { allContentfulGlobalPage } = useStaticQuery<Queries.NavbarQuery>(graphql`
 		query Navbar {
@@ -14,7 +16,7 @@ export const Navbar: React.FC = () => {
 	`);
 
 	return (
-		<div>
+		<div className={styles.navbar}>
 			<Link to="/">Home</Link>
 			<Link to="/blog">Blog</Link>
 			<Link to="/seasons">Seasons</Link>

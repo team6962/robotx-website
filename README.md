@@ -29,3 +29,5 @@
 -   [Contentful Documentation](https://www.contentful.com/developers/docs/)
 
 -   [RobotX Drive](https://drive.google.com/drive/u/1/folders/0ALyfIiWziIgnUk9PVA)
+
+-   [Pre-Gatsby source code](https://github.com/Team6962RobotiX/robotx-website/tree/572cea297ab63318ebf7e8d7779de1d90e948289)
