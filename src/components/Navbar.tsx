@@ -2,7 +2,7 @@ import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
 import { Icon } from './Icon';
 
-import * as styles from './Navbar.module.css';
+import * as styles from '../styles/Navbar.module.css';
 
 export const Navbar: React.FC = () => {
 	const { allContentfulGlobalPage } = useStaticQuery<Queries.NavbarQuery>(graphql`

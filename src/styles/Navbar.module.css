@@ -1,0 +1,24 @@
+.navbar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	padding: 0.5rem;
+	gap: 1rem;
+}
+
+.navbar a {
+	text-decoration: none;
+	color: var(--black);
+}
+
+.navbar svg {
+	height: 2rem;
+	float: left;
+}
+
+.navbar span {
+	padding: 0.5rem;
+	border: 0.5px var(--black) solid;
+	border-radius: 0.25rem;
+}

@@ -4,10 +4,22 @@
 	--white: #ededed;
 	--light: #d8dada;
 	--dark: #444444;
-	--black: #1c101c;
+	--black: #1c1c1c;
+}
+
+@media (prefers-color-scheme: dark) {
+	* {
+		--white: #1c1c1c;
+		--light: #444444;
+		--dark: #d8dada;
+		--black: #ededed;
+	}
 }
 
 body {
 	margin: 0;
 	padding: 0;
+
+	background-color: var(--white);
+	color: var(--black);
 }
