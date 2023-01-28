@@ -1,5 +1,6 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React from 'react';
+import { Icon } from './Icon';
 
 import * as styles from './Navbar.module.css';
 
@@ -16,15 +17,21 @@ export const Navbar: React.FC = () => {
 	`);
 
 	return (
-		<div className={styles.navbar}>
-			<Link to="/">Home</Link>
-			<Link to="/blog">Blog</Link>
-			<Link to="/seasons">Seasons</Link>
+		<nav className={styles.navbar}>
+			<Link to="/">
+				<Icon />
+			</Link>
+			<Link to="/blog">
+				<span>Blog</span>
+			</Link>
+			<Link to="/seasons">
+				<span>Seasons</span>
+			</Link>
 			{allContentfulGlobalPage.nodes.map((page) => (
 				<Link to={`/${page.slug}`} key={page.slug}>
-					{page.title}
+					<span>{page.title}</span>
 				</Link>
 			))}
-		</div>
+		</nav>
 	);
 };

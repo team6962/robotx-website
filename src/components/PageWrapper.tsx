@@ -6,8 +6,8 @@ export interface PageWrapperProps {
 }
 
 export const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => (
-	<div>
+	<>
 		<Navbar />
 		<main>{children}</main>
-	</div>
+	</>
 );
