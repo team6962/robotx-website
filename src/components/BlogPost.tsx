@@ -3,6 +3,7 @@ import { HeadFC, Link, PageProps } from 'gatsby';
 import { renderRichText } from '../util/renderRichText';
 import { format } from 'date-fns';
 import { PageWrapper } from './PageWrapper';
+import * as styles from "./BlogPost.module.css";
 
 export const formatString = 'MMMM do, yyyy';
 
@@ -17,6 +18,7 @@ export const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({ data }) =
 
 	return (
 		<PageWrapper>
+			<div className={styles.BlogPost}>
 			<h1>{title}</h1>
 			<h3>{format(new Date(data.contentfulBlogPost?.date!), formatString)}</h3>
 			<div>{renderRichText(content)}</div>
@@ -38,6 +40,8 @@ export const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({ data }) =
 					</Link>
 				) : null}
 			</div>
+			</div>
+			
 		</PageWrapper>
 	);
 };
