@@ -1,6 +1,6 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import GlobalPage from './{ContentfulGlobalPage.slug}';
+import { GlobalPage } from '../components/GlobalPage';
 
 export const pageQuery = graphql`
 	query Index {

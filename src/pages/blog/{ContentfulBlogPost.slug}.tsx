@@ -19,6 +19,13 @@ export const pageQuery = graphql`
 				}
 			}
 		}
+		allContentfulBlogPost(sort: { date: DESC }) {
+			nodes {
+				title
+				date
+				slug
+			}
+		}
 	}
 `;
 

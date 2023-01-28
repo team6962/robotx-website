@@ -2,11 +2,12 @@ import React from 'react';
 import { HeadFC, Link, PageProps } from 'gatsby';
 import { format } from 'date-fns';
 import { formatString } from './BlogPost';
+import { PageWrapper } from './PageWrapper';
 
-export const BlogPage: React.FC<PageProps<Queries.BlogPageQuery>> = ({ data }) => {
+export const BlogArchive: React.FC<PageProps<Queries.BlogArchiveQuery>> = ({ data }) => {
 	const { nodes } = data.allContentfulBlogPost!;
 	return (
-		<main>
+		<PageWrapper>
 			<h1>Blog Archives</h1>
 			<div>
 				{nodes.map((post) => (
@@ -19,10 +20,10 @@ export const BlogPage: React.FC<PageProps<Queries.BlogPageQuery>> = ({ data }) =
 					</Link>
 				))}
 			</div>
-		</main>
+		</PageWrapper>
 	);
 };
 
-export const Head: HeadFC<Queries.BlogPageQuery> = ({ data }) => (
+export const Head: HeadFC<Queries.BlogArchiveQuery> = ({ data }) => (
 	<title>Blog Archives | RobotX</title>
 );

@@ -1,8 +1,8 @@
 import { graphql } from 'gatsby';
-import { BlogPage, Head } from '../components/BlogPage';
+import { BlogArchive, Head } from '../components/BlogArchive';
 
 export const pageQuery = graphql`
-	query BlogPage {
+	query BlogArchive {
 		allContentfulBlogPost(sort: { date: DESC }) {
 			nodes {
 				title
@@ -15,6 +15,6 @@ export const pageQuery = graphql`
 	}
 `;
 
-export default BlogPage;
+export default BlogArchive;
 
 export { Head };
