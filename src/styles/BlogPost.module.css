@@ -1,0 +1,25 @@
+.controls {
+	display: grid;
+	grid-template-columns: max-content auto max-content;
+}
+
+.controls a {
+	padding: 0.5rem;
+	border: 1px var(--dark) solid;
+	border-radius: 0.2rem;
+
+	color: var(--black);
+	text-decoration: none;
+}
+
+.controls a p {
+	margin: 0;
+}
+
+.prev {
+	grid-column: 1;
+}
+
+.next {
+	grid-column: 3;
+}

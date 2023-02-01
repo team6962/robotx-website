@@ -1,0 +1,28 @@
+.archive {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.post {
+	display: block;
+
+	padding: 1rem;
+	border: 1px var(--dark) solid;
+	border-radius: 0.2rem;
+
+	color: var(--black);
+	text-decoration: none;
+}
+
+.post div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 1rem;
+}
+
+.post div h3,
+.post p {
+	margin: 0;
+}

@@ -17,8 +17,7 @@ body {
 	color: var(--black);
 
 	font-size: 18px;
-	font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif,
-		Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+	font-family: corporate-s, sans-serif;
 }
 
 h1,
@@ -27,7 +26,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: 'bebas-neue', sans-serif;
+	font-family: muli, sans-serif;
 }
 
 h1,
@@ -36,7 +35,6 @@ h3,
 h4,
 h5,
 h6,
-p,
-main picture {
+p {
 	margin: 0 0 1rem 0;
 }

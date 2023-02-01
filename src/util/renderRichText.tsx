@@ -5,11 +5,19 @@ import { ReactNode } from 'react';
 import { INLINES, BLOCKS, MARKS } from '@contentful/rich-text-types';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
+import * as styles from '../styles/renderRichText.module.css';
+
 const defaultOptions: Options = {
 	renderNode: {
 		[BLOCKS.EMBEDDED_ASSET]: (node) => {
 			const { target } = node.data;
-			return <GatsbyImage image={target.gatsbyImageData} alt={target.title} />;
+			return (
+				<GatsbyImage
+					image={target.gatsbyImageData}
+					alt={target.title}
+					className={styles.image}
+				/>
+			);
 		},
 		[INLINES.HYPERLINK]: (node, children) => {
 			const { uri } = node.data;
