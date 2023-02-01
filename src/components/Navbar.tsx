@@ -17,21 +17,23 @@ export const Navbar: React.FC = () => {
 	`);
 
 	return (
-		<nav className={styles.navbar}>
-			<Link to="/">
-				<Icon dark />
-			</Link>
-			<Link to="/blog">
-				<span>Blog</span>
-			</Link>
-			<Link to="/seasons">
-				<span>Seasons</span>
-			</Link>
-			{allContentfulGlobalPage.nodes.map((page) => (
-				<Link to={`/${page.slug}`} key={page.slug}>
-					<span>{page.title}</span>
+		<div className={styles.navbar}>
+			<nav>
+				<Link to="/">
+					<Icon dark />
 				</Link>
-			))}
-		</nav>
+				<Link to="/blog">
+					<span>Blog</span>
+				</Link>
+				<Link to="/seasons">
+					<span>Seasons</span>
+				</Link>
+				{allContentfulGlobalPage.nodes.map((page) => (
+					<Link to={`/${page.slug}`} key={page.slug}>
+						<span>{page.title}</span>
+					</Link>
+				))}
+			</nav>
+		</div>
 	);
 };

@@ -1,0 +1,14 @@
+.wrapper {
+	background-color: var(--white);
+
+	min-height: 100vh;
+	display: grid;
+	grid-template-rows: min-content auto min-content;
+}
+
+.wrapper > main {
+	width: min(40rem, calc(100% - 4rem)); /* im pretty sure this is stupid */
+	height: 100%;
+	padding: 0rem 2rem;
+	margin: 2rem auto;
+}

@@ -10,6 +10,14 @@ const defaultOptions: Options = {
 		[BLOCKS.EMBEDDED_ASSET]: (node) => {
 			const { target } = node.data;
 			return <GatsbyImage image={target.gatsbyImageData} alt={target.title} />;
+		},
+		[INLINES.HYPERLINK]: (node, children) => {
+			const { uri } = node.data;
+			return (
+				<a href={uri} target="_blank">
+					{children}
+				</a>
+			);
 		}
 	}
 };

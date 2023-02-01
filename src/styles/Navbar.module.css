@@ -1,12 +1,19 @@
 .navbar {
+	padding: 1rem 0rem;
+
+	background-color: var(--black);
+}
+
+.navbar > nav {
+	max-width: 40rem;
+	padding: 0rem 2rem;
+	margin: auto;
+
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 
-	padding: 1rem;
 	gap: 1rem;
-
-	background-color: var(--black);
 }
 
 .navbar a {
@@ -22,6 +29,7 @@
 .navbar svg {
 	height: 2rem;
 	float: left;
+	margin-right: 1rem;
 }
 
 .navbar span {

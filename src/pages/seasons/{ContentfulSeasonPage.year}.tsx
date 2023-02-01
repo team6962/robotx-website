@@ -8,15 +8,15 @@ export const pageQuery = graphql`
 			gameTitle
 			content {
 				raw
-				references {
-					... on ContentfulAsset {
-						contentful_id
-						title
-						description
-						gatsbyImageData(width: 1400, quality: 100)
-						__typename
-					}
-				}
+				# references {
+				# 	... on ContentfulAsset {
+				# 		contentful_id
+				# 		title
+				# 		description
+				# 		gatsbyImageData(width: 1400, quality: 100)
+				# 		__typename
+				# 	}
+				# }
 			}
 		}
 	}
