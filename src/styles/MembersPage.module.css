@@ -5,6 +5,12 @@
 	gap: 1rem;
 }
 
+@media (max-width: 500px) {
+	.leadership {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
 .image {
 	border-radius: 0.2rem;
 }
