@@ -1,0 +1,31 @@
+.leadership {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 1fr;
+	gap: 1rem;
+}
+
+.image {
+	border-radius: 0.2rem;
+}
+
+.title {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.title p {
+	margin: 0;
+}
+
+.title p:first-child {
+	font-weight: bold;
+	text-align: center;
+}
+
+.members {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
