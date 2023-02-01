@@ -19,7 +19,7 @@ export const Navbar: React.FC = () => {
 	return (
 		<nav className={styles.navbar}>
 			<Link to="/">
-				<Icon />
+				<Icon dark />
 			</Link>
 			<Link to="/blog">
 				<span>Blog</span>

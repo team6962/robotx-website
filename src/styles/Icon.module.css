@@ -1,0 +1,35 @@
+.inner {
+	fill: var(--white);
+}
+
+.inverted .inner {
+	fill: var(--light);
+}
+
+.dark .inner {
+	fill: var(--black);
+}
+
+.dark.inverted .inner {
+	fill: var(--dark);
+}
+
+.outer {
+	fill: var(--light);
+}
+
+.inverted .outer {
+	fill: var(--white);
+}
+
+.dark .outer {
+	fill: var(--dark);
+}
+
+.dark.inverted .outer {
+	fill: var(--black);
+}
+
+.glyph {
+	fill: var(--red);
+}

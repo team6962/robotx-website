@@ -3,13 +3,20 @@
 	flex-direction: row;
 	align-items: center;
 
-	padding: 0.5rem;
+	padding: 1rem;
 	gap: 1rem;
+
+	background-color: var(--black);
 }
 
 .navbar a {
 	text-decoration: none;
-	color: var(--black);
+	color: var(--light);
+	transition: color 0.3s;
+}
+
+.navbar a:hover {
+	color: var(--white);
 }
 
 .navbar svg {
@@ -19,6 +26,6 @@
 
 .navbar span {
 	padding: 0.5rem;
-	border: 0.5px var(--black) solid;
-	border-radius: 0.25rem;
+	border: 1px var(--dark) solid;
+	border-radius: 0.2rem;
 }
