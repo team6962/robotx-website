@@ -3,15 +3,20 @@ import { HeadFC, Link, PageProps } from 'gatsby';
 import { renderRichText } from '../util/renderRichText';
 import { PageWrapper } from './PageWrapper';
 
+import * as styles from '../styles/SeasonPage.module.css';
+
 export const SeasonPage: React.FC<PageProps<Queries.SeasonPageQuery>> = ({ data }) => {
-	const { gameTitle, content, year } = data.contentfulSeasonPage!;
+	const { gameTitle, content, year, featuredBlogPost } = data.contentfulSeasonPage!;
 	return (
 		<PageWrapper>
 			<h1>
 				{year}: {gameTitle}
 			</h1>
 			<div>{renderRichText(content)}</div>
-			<Link to={`/seasons/${year}/members`}>{year} Roster</Link>
+			<div className={styles.links}>
+				<Link to={`/seasons/${year}/members`}>View the roster</Link>
+				<Link to={`/blog/${featuredBlogPost?.slug}`}>Read the blog</Link>
+			</div>
 		</PageWrapper>
 	);
 };

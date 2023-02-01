@@ -1,0 +1,15 @@
+.links {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.links a {
+	padding: 0.5rem;
+	border: 1px var(--dark) solid;
+	border-radius: 0.2rem;
+
+	color: var(--black);
+	text-decoration: none;
+}

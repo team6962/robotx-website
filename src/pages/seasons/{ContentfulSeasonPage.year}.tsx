@@ -18,6 +18,9 @@ export const pageQuery = graphql`
 				# 	}
 				# }
 			}
+			featuredBlogPost {
+				slug
+			}
 		}
 	}
 `;
