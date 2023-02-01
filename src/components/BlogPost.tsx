@@ -21,7 +21,7 @@ export const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({ data }) =
 		<PageWrapper>
 			<div className={styles.title}>
 				<h1>{title}</h1>
-				<h3>{format(new Date(data.contentfulBlogPost?.date!), formatString)}</h3>
+				<h4>{format(new Date(data.contentfulBlogPost?.date!), formatString)}</h4>
 			</div>
 			<div className={styles.body}>{renderRichText(content)}</div>
 			<div className={styles.controls}>
