@@ -1,0 +1,20 @@
+.archive {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: 1fr;
+	gap: 1rem;
+}
+
+.archive a {
+	color: var(--black);
+	text-decoration: none;
+}
+
+.archive p {
+	margin: 0;
+	text-align: center;
+}
+
+.image {
+	border-radius: 0.2rem;
+}

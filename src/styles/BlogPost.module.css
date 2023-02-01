@@ -1,6 +1,8 @@
 .controls {
-	display: grid;
-	grid-template-columns: max-content auto max-content;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1rem;
 }
 
 .controls a {
@@ -16,10 +18,13 @@
 	margin: 0;
 }
 
-.prev {
-	grid-column: 1;
+.title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
 }
 
-.next {
-	grid-column: 3;
+.body {
+	text-align: justify;
 }

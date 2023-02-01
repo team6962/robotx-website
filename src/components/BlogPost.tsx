@@ -19,20 +19,22 @@ export const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({ data }) =
 
 	return (
 		<PageWrapper>
-			<h1>{title}</h1>
-			<h3>{format(new Date(data.contentfulBlogPost?.date!), formatString)}</h3>
-			<div>{renderRichText(content)}</div>
+			<div className={styles.title}>
+				<h1>{title}</h1>
+				<h3>{format(new Date(data.contentfulBlogPost?.date!), formatString)}</h3>
+			</div>
+			<div className={styles.body}>{renderRichText(content)}</div>
 			<div className={styles.controls}>
 				{prev !== undefined ? (
-					<Link to={`/blog/${prev.slug}`} className={styles.prev}>
-						← {prev.title}
-					</Link>
-				) : null}
+					<Link to={`/blog/${prev.slug}`}>← {prev.title}</Link>
+				) : (
+					<span />
+				)}
 				{next !== undefined ? (
-					<Link to={`/blog/${next.slug}`} className={styles.next}>
-						{next.title} →
-					</Link>
-				) : null}
+					<Link to={`/blog/${next.slug}`}>{next.title} →</Link>
+				) : (
+					<span />
+				)}
 			</div>
 		</PageWrapper>
 	);

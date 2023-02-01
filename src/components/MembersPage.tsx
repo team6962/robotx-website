@@ -12,15 +12,15 @@ export const MembersPage: React.FC<PageProps<Queries.MembersPageQuery>> = ({ dat
 			<h1>{year} Roster</h1>
 			<h3>Leadership</h3>
 			<div className={styles.leadership}>
-				{leadership!.map((member) => (
+				{leadership?.map((member) => (
 					<div>
 						<GatsbyImage
-							image={member!.gatsbyImageData!}
-							alt={member!.title!}
+							image={member?.gatsbyImageData!}
+							alt={member?.title!}
 							className={styles.image}
 						/>
 						<div className={styles.title}>
-							{member!.description!.split('\n').map((line) => (
+							{member?.description?.split('\n').map((line) => (
 								<p>{line}</p>
 							))}
 						</div>
@@ -29,7 +29,7 @@ export const MembersPage: React.FC<PageProps<Queries.MembersPageQuery>> = ({ dat
 			</div>
 			<h3>Membership</h3>
 			<p className={styles.members}>
-				{members!.map((member) => (
+				{members?.map((member) => (
 					<span>{member}</span>
 				))}
 			</p>
