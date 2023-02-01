@@ -16,7 +16,7 @@ export const BlogArchive: React.FC<PageProps<Queries.BlogArchiveQuery>> = ({ dat
 					<Link to={`/blog/${post.date}`} className={styles.post}>
 						<div>
 							<h3>{post.title}</h3>
-							<span>{format(new Date(post.date!), formatString)}</span>
+							<h5>{format(new Date(post.date!), formatString)}</h5>
 						</div>
 						<p>{post.description?.description}</p>
 					</Link>

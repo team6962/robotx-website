@@ -17,12 +17,13 @@
 
 .post div {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 1rem;
 }
 
-.post div h3,
+.post div *,
 .post p {
 	margin: 0;
 }
