@@ -1,0 +1,38 @@
+.tiers {
+	display: flex;
+	flex-direction: column;
+
+	gap: 4rem;
+}
+
+.tier h3 {
+	text-align: center;
+}
+
+.sponsors {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+}
+
+.image {
+	width: auto;
+}
+
+.image.Xtragalactic {
+	max-height: 5rem;
+}
+
+.image.Xtraordinary {
+	max-height: 3rem;
+}
+
+.image.Xceptional {
+	max-height: 2rem;
+}
+
+.Xcellent {
+	margin: 0;
+}

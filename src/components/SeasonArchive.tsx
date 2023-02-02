@@ -28,6 +28,6 @@ export const SeasonArchive: React.FC<PageProps<Queries.SeasonArchiveQuery>> = ({
 	);
 };
 
-export const Head: HeadFC<Queries.SeasonArchiveQuery> = ({ data }) => (
+export const Head: HeadFC<Queries.SeasonArchiveQuery> = () => (
 	<title>Season Archive | RobotX</title>
 );

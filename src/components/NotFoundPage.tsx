@@ -21,7 +21,7 @@ export const NotFoundPage: React.FC<PageProps> = ({ location }) => {
 			<p>
 				Sorry, we couldn’t find what you were looking for.{' '}
 				<a
-					href={`mailto:contact@team6962.com?subject=Website%20404&body=${encodeURI(
+					href={`mailto:contact@team6962.com?subject=Website%20404&body=${encodeURIComponent(
 						location.pathname
 					)}%20looks%20like%20it's%20missing%20from%20the%20team%20website.`}
 				>

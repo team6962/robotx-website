@@ -8,7 +8,7 @@ export const pageQuery = graphql`
 				year
 				gameTitle
 				thumbnail {
-					gatsbyImageData(width: 1400, quality: 100)
+					gatsbyImageData(width: 500, quality: 100)
 				}
 			}
 		}

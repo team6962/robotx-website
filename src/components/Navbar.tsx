@@ -36,6 +36,9 @@ export const Navbar: React.FC = () => {
 				<Link to={`/seasons/${currentSeason}`}>
 					<span>{currentSeason}</span>
 				</Link>
+				<Link to="/sponsors">
+					<span>Sponsors</span>
+				</Link>
 				<Link to="/seasons">
 					<span>Seasons</span>
 				</Link>
