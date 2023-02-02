@@ -24,6 +24,7 @@ const Tier: React.FC<TierProps> = ({ tierName, nodes, titleComponent }) =>
 								<GatsbyImage
 									image={node.logo?.gatsbyImageData!}
 									alt={node.name!}
+									title={node.name!}
 									className={`${styles.image} ${
 										tierName in styles ? styles[tierName] : ''
 									}`}
@@ -35,6 +36,7 @@ const Tier: React.FC<TierProps> = ({ tierName, nodes, titleComponent }) =>
 								<img
 									src={node.logo?.url!}
 									alt={node.name!}
+									title={node.name!}
 									className={`${styles.image} ${
 										tierName in styles ? styles[tierName] : ''
 									}`}
