@@ -1,6 +1,6 @@
 import React from 'react';
 import { HeadFC, Link, PageProps } from 'gatsby';
-import { PageWrapper } from './PageWrapper';
+
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 import * as styles from '../styles/SeasonArchive.module.css';
@@ -11,7 +11,7 @@ export const SeasonArchive: React.FC<PageProps<Queries.SeasonArchiveQuery>> = ({
 }) => {
 	const { nodes } = data.allContentfulSeasonPage;
 	return (
-		<PageWrapper location={location}>
+		<>
 			<h1>Season Archive</h1>
 			<div className={styles.archive}>
 				{nodes.map((season) => (
@@ -27,7 +27,7 @@ export const SeasonArchive: React.FC<PageProps<Queries.SeasonArchiveQuery>> = ({
 					</Link>
 				))}
 			</div>
-		</PageWrapper>
+		</>
 	);
 };
 

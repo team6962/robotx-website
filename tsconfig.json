@@ -9,5 +9,5 @@
 		"forceConsistentCasingInFileNames": true,
 		"strict": true
 	},
-	"include": ["./src/**/*", "./gatsby-node.ts", "./gatsby-config.ts", "./plugins/**/*"]
+	"include": ["./src/**/*", "./plugins/**/*", "./gatsby-*.ts", "./gatsby-*.tsx"]
 }

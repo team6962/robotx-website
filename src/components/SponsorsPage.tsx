@@ -1,6 +1,6 @@
 import React from 'react';
 import { HeadFC, PageProps } from 'gatsby';
-import { PageWrapper } from './PageWrapper';
+
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 import * as styles from '../styles/SponsorsPage.module.css';
@@ -69,7 +69,7 @@ export const SponsorsPage: React.FC<PageProps<Queries.SponsorsQuery>> = ({ data,
 	const { nodes } = data.allContentfulSponsor;
 	console.log(nodes);
 	return (
-		<PageWrapper location={location}>
+		<>
 			<h1>Sponsors</h1>
 			<div className={styles.tiers}>
 				<Tier nodes={nodes} tierName="Xtragalactic" titleComponent="h2" />
@@ -77,7 +77,7 @@ export const SponsorsPage: React.FC<PageProps<Queries.SponsorsQuery>> = ({ data,
 				<Tier nodes={nodes} tierName="Xceptional" titleComponent="p" />
 				<Tier nodes={nodes} tierName="Xcellent" titleComponent="p" />
 			</div>
-		</PageWrapper>
+		</>
 	);
 };
 

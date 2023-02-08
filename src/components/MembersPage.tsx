@@ -1,14 +1,13 @@
 import React from 'react';
 import { HeadFC, PageProps } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { PageWrapper } from './PageWrapper';
 
 import * as styles from '../styles/MembersPage.module.css';
 
 export const MembersPage: React.FC<PageProps<Queries.MembersPageQuery>> = ({ data, location }) => {
 	const { year, leadership, members } = data.contentfulSeasonPage!;
 	return (
-		<PageWrapper location={location}>
+		<>
 			<h1>{year} Roster</h1>
 			<h3>Leadership</h3>
 			<div className={styles.leadership}>
@@ -33,7 +32,7 @@ export const MembersPage: React.FC<PageProps<Queries.MembersPageQuery>> = ({ dat
 					<span>{member}</span>
 				))}
 			</p>
-		</PageWrapper>
+		</>
 	);
 };
 
