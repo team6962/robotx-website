@@ -6,10 +6,10 @@ import { PageWrapper } from './PageWrapper';
 
 import * as styles from '../styles/BlogArchive.module.css';
 
-export const BlogArchive: React.FC<PageProps<Queries.BlogArchiveQuery>> = ({ data }) => {
+export const BlogArchive: React.FC<PageProps<Queries.BlogArchiveQuery>> = ({ data, location }) => {
 	const { nodes } = data.allContentfulBlogPost!;
 	return (
-		<PageWrapper>
+		<PageWrapper location={location}>
 			<h1>Blog Archives</h1>
 			<div className={styles.archive}>
 				{nodes.map((post) => (

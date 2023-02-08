@@ -65,11 +65,11 @@ const Tier: React.FC<TierProps> = ({ tierName, nodes, titleComponent }) =>
 		</div>
 	) : null;
 
-export const SponsorsPage: React.FC<PageProps<Queries.SponsorsQuery>> = ({ data }) => {
+export const SponsorsPage: React.FC<PageProps<Queries.SponsorsQuery>> = ({ data, location }) => {
 	const { nodes } = data.allContentfulSponsor;
 	console.log(nodes);
 	return (
-		<PageWrapper>
+		<PageWrapper location={location}>
 			<h1>Sponsors</h1>
 			<div className={styles.tiers}>
 				<Tier nodes={nodes} tierName="Xtragalactic" titleComponent="h2" />

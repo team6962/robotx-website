@@ -6,11 +6,12 @@ import * as styles from '../styles/PageWrapper.module.css';
 
 export interface PageWrapperProps {
 	children: ReactNode;
+	location: Location;
 }
 
-export const PageWrapper: React.FC<PageWrapperProps> = ({ children }) => (
+export const PageWrapper: React.FC<PageWrapperProps> = ({ children, location }) => (
 	<div className={styles.wrapper}>
-		<Navbar />
+		<Navbar location={location} />
 		<main>{children}</main>
 		<Footer />
 	</div>

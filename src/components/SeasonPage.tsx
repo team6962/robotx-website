@@ -5,10 +5,10 @@ import { PageWrapper } from './PageWrapper';
 
 import * as styles from '../styles/SeasonPage.module.css';
 
-export const SeasonPage: React.FC<PageProps<Queries.SeasonPageQuery>> = ({ data }) => {
+export const SeasonPage: React.FC<PageProps<Queries.SeasonPageQuery>> = ({ data, location }) => {
 	const { gameTitle, content, year, featuredBlogPost } = data.contentfulSeasonPage!;
 	return (
-		<PageWrapper>
+		<PageWrapper location={location}>
 			<h1>
 				{year}: {gameTitle}
 			</h1>

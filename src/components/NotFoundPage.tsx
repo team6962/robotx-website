@@ -16,7 +16,7 @@ export const NotFoundPage: React.FC<PageProps> = ({ location }) => {
 	`);
 
 	return (
-		<PageWrapper>
+		<PageWrapper location={location}>
 			<h1>404</h1>
 			<p>
 				Sorry, we couldn’t find what you were looking for.{' '}

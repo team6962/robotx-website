@@ -8,7 +8,7 @@ import * as styles from '../styles/BlogPost.module.css';
 
 export const formatString = 'MMMM do, yyyy';
 
-export const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({ data }) => {
+export const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({ data, location }) => {
 	const { title, content, date } = data.contentfulBlogPost!;
 
 	// find next and prev posts
@@ -18,7 +18,7 @@ export const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({ data }) =
 	const next = nodes[currentIndex - 1];
 
 	return (
-		<PageWrapper>
+		<PageWrapper location={location}>
 			<div className={styles.title}>
 				<h1>{title}</h1>
 				<h4>{format(new Date(data.contentfulBlogPost?.date!), formatString)}</h4>

@@ -22,7 +22,8 @@
 	transition: color 0.3s;
 }
 
-.navbar a:hover {
+.navbar a:hover,
+.navbar .active {
 	color: var(--white);
 }
 

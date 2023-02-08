@@ -5,14 +5,17 @@ import { GatsbyImage } from 'gatsby-plugin-image';
 
 import * as styles from '../styles/SeasonArchive.module.css';
 
-export const SeasonArchive: React.FC<PageProps<Queries.SeasonArchiveQuery>> = ({ data }) => {
+export const SeasonArchive: React.FC<PageProps<Queries.SeasonArchiveQuery>> = ({
+	data,
+	location
+}) => {
 	const { nodes } = data.allContentfulSeasonPage;
 	return (
-		<PageWrapper>
+		<PageWrapper location={location}>
 			<h1>Season Archive</h1>
 			<div className={styles.archive}>
 				{nodes.map((season) => (
-					<Link to={`/seasons/${season.year}`}>
+					<Link to={`/seasons/${season.year}`} key={season.year}>
 						<GatsbyImage
 							image={season.thumbnail?.gatsbyImageData!}
 							alt={season.year!}
