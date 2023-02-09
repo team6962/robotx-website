@@ -9,29 +9,37 @@ export const MembersPage: React.FC<PageProps<Queries.MembersPageQuery>> = ({ dat
 	return (
 		<>
 			<h1>{year} Roster</h1>
-			<h3>Leadership</h3>
-			<div className={styles.leadership}>
-				{leadership?.map((member) => (
-					<div>
-						<GatsbyImage
-							image={member?.gatsbyImageData!}
-							alt={member?.title!}
-							className={styles.image}
-						/>
-						<div className={styles.title}>
-							{member?.description?.split('\n').map((line) => (
-								<p>{line}</p>
-							))}
-						</div>
+			{leadership !== null && leadership.length !== 0 ? (
+				<>
+					<h3>Leadership</h3>
+					<div className={styles.leadership}>
+						{leadership?.map((member) => (
+							<div>
+								<GatsbyImage
+									image={member?.gatsbyImageData!}
+									alt={member?.title!}
+									className={styles.image}
+								/>
+								<div className={styles.title}>
+									{member?.description?.split('\n').map((line) => (
+										<p>{line}</p>
+									))}
+								</div>
+							</div>
+						))}
 					</div>
-				))}
-			</div>
-			<h3>Membership</h3>
-			<p className={styles.members}>
-				{members?.map((member) => (
-					<span>{member}</span>
-				))}
-			</p>
+				</>
+			) : null}
+			{members !== null && members.length !== 0 ? (
+				<>
+					<h3>Membership</h3>
+					<p className={styles.members}>
+						{members?.map((member) => (
+							<span>{member}</span>
+						))}
+					</p>
+				</>
+			) : null}
 		</>
 	);
 };

@@ -14,7 +14,9 @@ export const SeasonPage: React.FC<PageProps<Queries.SeasonPageQuery>> = ({ data,
 			<div>{renderRichText(content)}</div>
 			<div className={styles.links}>
 				<Link to={`/seasons/${year}/members`}>View the roster</Link>
-				<Link to={`/blog/${featuredBlogPost?.slug}`}>Read the blog</Link>
+				{featuredBlogPost !== null ? (
+					<Link to={`/blog/${featuredBlogPost?.slug}`}>Read the blog</Link>
+				) : null}
 			</div>
 		</>
 	);
