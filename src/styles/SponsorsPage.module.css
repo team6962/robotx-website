@@ -11,29 +11,33 @@
 
 .sponsors {
 	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	gap: 1rem;
+}
+
+.sponsors.Xcellent {
+	flex-direction: row;
+	flex-wrap: wrap;
 }
 
 .image {
 	width: auto;
 }
 
-.image.Xtragalactic {
+.Xtragalactic .image {
 	max-height: 5rem;
 }
 
-.image.Xtraordinary {
+.Xtraordinary .image {
 	max-height: 3rem;
 }
 
-.image.Xceptional {
+.Xceptional .image {
 	max-height: 2rem;
 }
 
-.Xcellent {
+.Xcellent p {
 	margin: 0;
 }

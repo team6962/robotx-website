@@ -15,7 +15,7 @@ const Tier: React.FC<TierProps> = ({ tierName, nodes, titleComponent }) =>
 	nodes.find((node) => node.tier === tierName) !== undefined ? (
 		<div className={styles.tier}>
 			<h3>{tierName}</h3>
-			<div className={styles.sponsors}>
+			<div className={`${styles.sponsors} ${tierName in styles ? styles[tierName] : ''}`}>
 				{nodes
 					.filter((node) => node.tier === tierName)
 					.map((node) => {
@@ -25,9 +25,7 @@ const Tier: React.FC<TierProps> = ({ tierName, nodes, titleComponent }) =>
 									image={node.logo?.gatsbyImageData!}
 									alt={node.name!}
 									title={node.name!}
-									className={`${styles.image} ${
-										tierName in styles ? styles[tierName] : ''
-									}`}
+									className={styles.image}
 									objectFit="contain"
 								/>
 							);
@@ -37,29 +35,12 @@ const Tier: React.FC<TierProps> = ({ tierName, nodes, titleComponent }) =>
 									src={node.logo?.url!}
 									alt={node.name!}
 									title={node.name!}
-									className={`${styles.image} ${
-										tierName in styles ? styles[tierName] : ''
-									}`}
+									className={styles.image}
 								/>
 							);
-						if (titleComponent === 'h2')
-							return (
-								<h2 className={tierName in styles ? styles[tierName] : ''}>
-									{node.name}
-								</h2>
-							);
-						if (titleComponent === 'h4')
-							return (
-								<h4 className={tierName in styles ? styles[tierName] : ''}>
-									{node.name}
-								</h4>
-							);
-						if (titleComponent === 'p')
-							return (
-								<p className={tierName in styles ? styles[tierName] : ''}>
-									{node.name}
-								</p>
-							);
+						if (titleComponent === 'h2') return <h2>{node.name}</h2>;
+						if (titleComponent === 'h4') return <h4>{node.name}</h4>;
+						if (titleComponent === 'p') return <p>{node.name}</p>;
 					})}
 			</div>
 		</div>
