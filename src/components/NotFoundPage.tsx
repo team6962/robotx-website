@@ -16,7 +16,7 @@ export const NotFoundPage: React.FC<PageProps> = ({ location }) => {
 	`);
 
 	return (
-		<PageWrapper>
+		<>
 			<h1>404</h1>
 			<p>
 				Sorry, we couldn’t find what you were looking for.{' '}
@@ -34,7 +34,7 @@ export const NotFoundPage: React.FC<PageProps> = ({ location }) => {
 				alt={contentfulAsset?.description!}
 				className={styles.image}
 			/>
-		</PageWrapper>
+		</>
 	);
 };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { HeadFC, PageProps } from 'gatsby';
-import { PageWrapper } from './PageWrapper';
+
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 import * as styles from '../styles/SponsorsPage.module.css';
@@ -15,7 +15,7 @@ const Tier: React.FC<TierProps> = ({ tierName, nodes, titleComponent }) =>
 	nodes.find((node) => node.tier === tierName) !== undefined ? (
 		<div className={styles.tier}>
 			<h3>{tierName}</h3>
-			<div className={styles.sponsors}>
+			<div className={`${styles.sponsors} ${tierName in styles ? styles[tierName] : ''}`}>
 				{nodes
 					.filter((node) => node.tier === tierName)
 					.map((node) => {
@@ -25,9 +25,7 @@ const Tier: React.FC<TierProps> = ({ tierName, nodes, titleComponent }) =>
 									image={node.logo?.gatsbyImageData!}
 									alt={node.name!}
 									title={node.name!}
-									className={`${styles.image} ${
-										tierName in styles ? styles[tierName] : ''
-									}`}
+									className={styles.image}
 									objectFit="contain"
 								/>
 							);
@@ -37,39 +35,22 @@ const Tier: React.FC<TierProps> = ({ tierName, nodes, titleComponent }) =>
 									src={node.logo?.url!}
 									alt={node.name!}
 									title={node.name!}
-									className={`${styles.image} ${
-										tierName in styles ? styles[tierName] : ''
-									}`}
+									className={styles.image}
 								/>
 							);
-						if (titleComponent === 'h2')
-							return (
-								<h2 className={tierName in styles ? styles[tierName] : ''}>
-									{node.name}
-								</h2>
-							);
-						if (titleComponent === 'h4')
-							return (
-								<h4 className={tierName in styles ? styles[tierName] : ''}>
-									{node.name}
-								</h4>
-							);
-						if (titleComponent === 'p')
-							return (
-								<p className={tierName in styles ? styles[tierName] : ''}>
-									{node.name}
-								</p>
-							);
+						if (titleComponent === 'h2') return <h2>{node.name}</h2>;
+						if (titleComponent === 'h4') return <h4>{node.name}</h4>;
+						if (titleComponent === 'p') return <p>{node.name}</p>;
 					})}
 			</div>
 		</div>
 	) : null;
 
-export const SponsorsPage: React.FC<PageProps<Queries.SponsorsQuery>> = ({ data }) => {
+export const SponsorsPage: React.FC<PageProps<Queries.SponsorsQuery>> = ({ data, location }) => {
 	const { nodes } = data.allContentfulSponsor;
 	console.log(nodes);
 	return (
-		<PageWrapper>
+		<>
 			<h1>Sponsors</h1>
 			<div className={styles.tiers}>
 				<Tier nodes={nodes} tierName="Xtragalactic" titleComponent="h2" />
@@ -77,7 +58,7 @@ export const SponsorsPage: React.FC<PageProps<Queries.SponsorsQuery>> = ({ data 
 				<Tier nodes={nodes} tierName="Xceptional" titleComponent="p" />
 				<Tier nodes={nodes} tierName="Xcellent" titleComponent="p" />
 			</div>
-		</PageWrapper>
+		</>
 	);
 };
 

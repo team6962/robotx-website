@@ -2,14 +2,13 @@ import React from 'react';
 import { HeadFC, Link, PageProps } from 'gatsby';
 import { format } from 'date-fns';
 import { formatString } from './BlogPost';
-import { PageWrapper } from './PageWrapper';
 
 import * as styles from '../styles/BlogArchive.module.css';
 
-export const BlogArchive: React.FC<PageProps<Queries.BlogArchiveQuery>> = ({ data }) => {
+export const BlogArchive: React.FC<PageProps<Queries.BlogArchiveQuery>> = ({ data, location }) => {
 	const { nodes } = data.allContentfulBlogPost!;
 	return (
-		<PageWrapper>
+		<>
 			<h1>Blog Archives</h1>
 			<div className={styles.archive}>
 				{nodes.map((post) => (
@@ -22,7 +21,7 @@ export const BlogArchive: React.FC<PageProps<Queries.BlogArchiveQuery>> = ({ dat
 					</Link>
 				))}
 			</div>
-		</PageWrapper>
+		</>
 	);
 };
 
