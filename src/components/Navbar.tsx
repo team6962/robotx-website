@@ -51,7 +51,13 @@ export const Navbar: React.FC<NavbarProps> = ({ location }) => {
 				<Link to="/" className={styles.home}>
 					<Icon dark />
 				</Link>
-				<div className={`${styles.items} ${menuActive ? styles.active : ''}`}>
+				<div
+					className={`${styles.items} ${menuActive ? styles.active : ''}`}
+					onClick={(event) =>
+						// this probably sucks but it also definitely works so ¯\_(ツ)_/¯
+						(event.target as HTMLElement).tagName === 'A' && setMenuActive(false)
+					}
+				>
 					<NavItem to="/blog/" text="Blog" path={path} />
 					<NavItem to={`/seasons/${currentSeason}/`} text={currentSeason!} path={path} />
 					<NavItem to="/sponsors/" text="Sponsors" path={path} />
