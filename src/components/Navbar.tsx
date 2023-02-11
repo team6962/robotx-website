@@ -1,14 +1,27 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
-import React from 'react';
+import React, { useState } from 'react';
 import { Icon } from './Icon';
+import { FaBars } from 'react-icons/fa';
 
 import * as styles from '../styles/Navbar.module.css';
 
-interface LocationProps {
+interface NavItemProps {
+	to: string;
+	text: string;
+	path?: string;
+}
+
+const NavItem: React.FC<NavItemProps> = ({ to, text, path }) => (
+	<Link to={to} className={to === path ? styles.active : undefined}>
+		{text}
+	</Link>
+);
+
+interface NavbarProps {
 	location: Location;
 }
 
-export const Navbar: React.FC<LocationProps> = ({ location }) => {
+export const Navbar: React.FC<NavbarProps> = ({ location }) => {
 	const { allContentfulGlobalPage, allContentfulSeasonPage } =
 		useStaticQuery<Queries.NavbarQuery>(graphql`
 			query Navbar {
@@ -30,36 +43,37 @@ export const Navbar: React.FC<LocationProps> = ({ location }) => {
 
 	const path = location.pathname;
 
+	const [menuActive, setMenuActive] = useState(false);
+
 	return (
 		<div className={styles.navbar}>
 			<nav>
-				<Link to="/">
+				<Link to="/" className={styles.home}>
 					<Icon dark />
 				</Link>
-				<Link to="/blog/" className={'/blog/' === path ? styles.active : undefined}>
-					<span>Blog</span>
-				</Link>
-				<Link
-					to={`/seasons/${currentSeason}/`}
-					className={`/seasons/${currentSeason}/` === path ? styles.active : undefined}
+				<div
+					className={`${styles.items} ${menuActive ? styles.active : ''}`}
+					onClick={(event) =>
+						// this probably sucks but it also definitely works so ¯\_(ツ)_/¯
+						(event.target as HTMLElement).tagName === 'A' && setMenuActive(false)
+					}
 				>
-					<span>{currentSeason}</span>
-				</Link>
-				<Link to="/sponsors/" className={'/sponsors/' === path ? styles.active : undefined}>
-					<span>Sponsors</span>
-				</Link>
-				<Link to="/seasons/" className={'/seasons/' === path ? styles.active : undefined}>
-					<span>Seasons</span>
-				</Link>
-				{allContentfulGlobalPage.nodes.map((page) => (
-					<Link
-						to={`/${page.slug}/`}
-						key={page.slug}
-						className={`/${page.slug}/` === path ? styles.active : undefined}
-					>
-						<span>{page.title}</span>
-					</Link>
-				))}
+					<NavItem to="/blog/" text="Blog" path={path} />
+					<NavItem to={`/seasons/${currentSeason}/`} text={currentSeason!} path={path} />
+					<NavItem to="/sponsors/" text="Sponsors" path={path} />
+					<NavItem to="/seasons/" text="Seasons" path={path} />
+					{allContentfulGlobalPage.nodes.map((page) => (
+						<NavItem
+							to={`/${page.slug}/`}
+							text={page.title!}
+							key={page.slug}
+							path={path}
+						/>
+					))}
+				</div>
+				<div className={styles.hamburger} onClick={() => setMenuActive(!menuActive)}>
+					<FaBars />
+				</div>
 			</nav>
 		</div>
 	);
