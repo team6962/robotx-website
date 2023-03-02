@@ -1,4 +1,40 @@
+@import url('https://use.typekit.net/zsi8dan.css');
+
+* {
+	--red: #cb303b;
+	--blue: #4979db;
+	--white: #ededed;
+	--light: #d8dada;
+	--dark: #444444;
+	--black: #1c1c1c;
+}
+
 body {
 	margin: 0;
 	padding: 0;
+
+	background-color: var(--black);
+	color: var(--black);
+
+	font-size: 18px;
+	font-family: corporate-s, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: muli, sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0 0 1rem 0;
 }

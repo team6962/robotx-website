@@ -6,13 +6,9 @@ export const pageQuery = graphql`
 		contentfulSeasonPage(year: { eq: $year }) {
 			year
 			leadership {
-				... on ContentfulAsset {
-					contentful_id
-					title
-					description
-					gatsbyImageData(width: 500, quality: 100)
-					__typename
-				}
+				title
+				description
+				gatsbyImageData(width: 500, quality: 100)
 			}
 			members
 		}

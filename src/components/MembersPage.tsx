@@ -1,31 +1,46 @@
 import React from 'react';
 import { HeadFC, PageProps } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
-import { PageWrapper } from './PageWrapper';
 
-export const MembersPage: React.FC<PageProps<Queries.MembersPageQuery>> = ({ data }) => {
+import * as styles from '../styles/MembersPage.module.css';
+
+export const MembersPage: React.FC<PageProps<Queries.MembersPageQuery>> = ({ data, location }) => {
 	const { year, leadership, members } = data.contentfulSeasonPage!;
 	return (
-		<PageWrapper>
+		<>
 			<h1>{year} Roster</h1>
-			<h3>Leadership</h3>
-			<div>
-				{leadership!.map((member) => (
-					<div>
-						<GatsbyImage image={member!.gatsbyImageData!} alt={member!.title!} />
-						{member!.description!.split('\n').map((line) => (
-							<p>{line}</p>
+			{leadership !== null && leadership.length !== 0 ? (
+				<>
+					<h3>Leadership</h3>
+					<div className={styles.leadership}>
+						{leadership?.map((member) => (
+							<div>
+								<GatsbyImage
+									image={member?.gatsbyImageData!}
+									alt={member?.title!}
+									className={styles.image}
+								/>
+								<div className={styles.title}>
+									{member?.description?.split('\n').map((line) => (
+										<p>{line}</p>
+									))}
+								</div>
+							</div>
 						))}
 					</div>
-				))}
-			</div>
-			<h3>Members</h3>
-			<div>
-				{members!.map((member) => (
-					<p>{member}</p>
-				))}
-			</div>
-		</PageWrapper>
+				</>
+			) : null}
+			{members !== null && members.length !== 0 ? (
+				<>
+					<h3>Membership</h3>
+					<p className={styles.members}>
+						{members?.map((member) => (
+							<span>{member}</span>
+						))}
+					</p>
+				</>
+			) : null}
+		</>
 	);
 };
 

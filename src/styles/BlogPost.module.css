@@ -1,0 +1,30 @@
+.controls {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 1rem;
+}
+
+.controls a {
+	padding: 0.5rem;
+	border: 1px var(--dark) solid;
+	border-radius: 0.2rem;
+
+	color: var(--black);
+	text-decoration: none;
+}
+
+.controls a p {
+	margin: 0;
+}
+
+.title {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.body {
+	text-align: justify;
+}
