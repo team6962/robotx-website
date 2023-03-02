@@ -20,7 +20,8 @@
 
 4.  **develop!**
 
-    You are now ready to begin local development. Run `npm run develop` to get started.
+    You are now ready to begin local development. Run `npm run develop` to get started. 
+    *** Small tweak for testing workflow ***
 
 ## 📚 Useful References
 
