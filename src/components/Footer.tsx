@@ -7,7 +7,7 @@ export const Footer: React.FC = () => {
 	return (
 		<footer className={styles.footer}>
 			<div>
-				<a href="https://github.com/Team6962RobotiX" target="_blank" rel="noreferrer">
+				<a href="https://github.com/team6962" target="_blank" rel="noreferrer">
 					<FaGithub size={24} />
 					<span className={styles.hidden}>Github</span>
 				</a>
