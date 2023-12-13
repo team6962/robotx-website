@@ -4,7 +4,7 @@
 	--red: #cb303b;
 	--blue: #4979db;
 	--white: #ededed;
-	--light: #F2DE8B;
+	--light: #d8dada;
 	--dark: #444444;
 	--black: #1c1c1c;
 }
@@ -13,10 +13,10 @@ body {
 	margin: 0;
 	padding: 0;
 
-	background-color: var(--dark);
+	background-color: var(--black);
 	color: var(--black);
 
-	font-size: 21px;
+	font-size: 18px;
 	font-family: corporate-s, sans-serif;
 }
 
