@@ -1,7 +1,6 @@
 import React from 'react';
 import { HeadFC, PageProps } from 'gatsby';
 import { renderRichText } from '../util/renderRichText';
-import * as styles from '../styles/global.css';
 
 export const GlobalPage: React.FC<PageProps<Queries.GlobalPageQuery>> = ({ data, location }) => {
 	const { title, content } = data.contentfulGlobalPage!;
