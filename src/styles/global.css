@@ -1,12 +1,12 @@
 @import url('https://use.typekit.net/zsi8dan.css');
 
 * {
-	--red: #252E45;
+	--red: #cb303b;
 	--blue: #252E45;
-	--white: #252E45;
-	--light: #252E45;
-	--dark: #252E45;
-	--black: #252E45;
+	--white: #ededed;
+	--light: #d8dada;
+	--dark: #444444;
+	--blue: #252E45;
 }
 
 body {
