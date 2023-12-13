@@ -6,14 +6,14 @@
 	--white: #ededed;
 	--light: #d8dada;
 	--dark: #444444;
-	--blue: #252E45;
+	--black: #252E45;
 }
 
 body {
 	margin: 0;
 	padding: 0;
 
-	background-color: #252E45;
+	background-color: var(--dark);
 	color: var(--black);
 
 	font-size: 34px;
