@@ -4,7 +4,7 @@
 	--red: #cb303b;
 	--blue: #4979db;
 	--white: #ededed;
-	--light: #d8dada;
+	--light: #F2DE8B;
 	--dark: #444444;
 	--black: #1c1c1c;
 }
@@ -16,7 +16,7 @@ body {
 	background-color: var(--dark);
 	color: var(--black);
 
-	font-size: 34px;
+	font-size: 21px;
 	font-family: corporate-s, sans-serif;
 }
 
