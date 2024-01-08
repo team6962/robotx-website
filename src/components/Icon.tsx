@@ -7,7 +7,7 @@ export interface IconProps {
 	dark?: boolean;
 }
 
-export const Icon: React.FC<IconProps> = ({ inverted = false, dark = false }) => (
+export const Icon: React.FC<IconProps> = ({ inverted = true dark = false }) => (
 	<svg
 		viewBox="0 0 2250 2250"
 		className={`${dark ? styles.dark : ''} ${inverted ? styles.inverted : ''}`}
