@@ -49,7 +49,7 @@ export const Navbar: React.FC<NavbarProps> = ({ location }) => {
 		<div className={styles.navbar}>
 			<nav>
 				<Link to="/" className={styles.home}>
-					<Icon dark />
+					<Icon light />
 				</Link>
 				<div
 					className={`${styles.items} ${menuActive ? styles.active : ''}`}
