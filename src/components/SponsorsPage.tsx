@@ -62,4 +62,4 @@ export const SponsorsPage: React.FC<PageProps<Queries.SponsorsQuery>> = ({ data,
 	);
 };
 
-export const Head: HeadFC<Queries.SponsorsQuery> = () => <title>Sponsors | RobotX</title>;
+export const Head: HeadFC<Queries.SponsorsQuery> = () => <title>Sponsors | Antares</title>;

@@ -45,5 +45,5 @@ export const MembersPage: React.FC<PageProps<Queries.MembersPageQuery>> = ({ dat
 };
 
 export const Head: HeadFC<Queries.MembersPageQuery> = ({ data }) => (
-	<title>{data.contentfulSeasonPage?.year} Roster | RobotX</title>
+	<title>{data.contentfulSeasonPage?.year} Roster | Antares</title>
 );

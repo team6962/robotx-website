@@ -32,5 +32,5 @@ export const SeasonArchive: React.FC<PageProps<Queries.SeasonArchiveQuery>> = ({
 };
 
 export const Head: HeadFC<Queries.SeasonArchiveQuery> = () => (
-	<title>Season Archive | RobotX</title>
+	<title>Season Archive | Antares</title>
 );
