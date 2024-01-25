@@ -2,18 +2,18 @@
 
 * {
 	--blue: #252E45;
+	--yellow: #F2DE8B;
 	--white: #EDEDED;
-	--light: #F2DE8B;
-	--dark: #39456A;
-	--black: #1D2335;
+	--light: #39456A;
+	--dark: #1D2335;
 }
 
 body {
 	margin: 0;
 	padding: 0;
 
-	background-color: var(--black);
-	color: var(--black);
+	background-color: var(--dark);
+	color: var(--dark);
 
 	font-size: 18px;
 	font-family: corporate-s, sans-serif;

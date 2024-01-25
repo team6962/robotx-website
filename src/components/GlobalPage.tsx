@@ -13,5 +13,5 @@ export const GlobalPage: React.FC<PageProps<Queries.GlobalPageQuery>> = ({ data,
 };
 
 export const Head: HeadFC<Queries.GlobalPageQuery> = ({ data }) => (
-	<title>{data.contentfulGlobalPage?.title} | RobotX</title>
+	<title>{data.contentfulGlobalPage?.title} | Antares</title>
 );

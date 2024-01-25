@@ -21,7 +21,7 @@
 
 .footer a {
 	text-decoration: none;
-	color: var(--light);
+	color: var(--yellow);
 	transition: color 0.3s;
 
 	display: flex; /* makes mystery bottom pseudo-padding go away */
@@ -32,7 +32,7 @@
 }
 
 .footer > span {
-	color: var(--light);
+	color: var(--yellow);
 	font-size: 0.75rem;
 }
 

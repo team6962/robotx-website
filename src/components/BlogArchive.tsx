@@ -25,4 +25,4 @@ export const BlogArchive: React.FC<PageProps<Queries.BlogArchiveQuery>> = ({ dat
 	);
 };
 
-export const Head: HeadFC<Queries.BlogArchiveQuery> = () => <title>Blog Archives | RobotX</title>;
+export const Head: HeadFC<Queries.BlogArchiveQuery> = () => <title>Blog Archives | Antares</title>;

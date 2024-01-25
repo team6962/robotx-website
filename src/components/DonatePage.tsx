@@ -48,6 +48,6 @@ export const BlogPost: React.FC<PageProps<Queries.BlogPostQuery>> = ({ data }) =
 export const Head: HeadFC<Queries.BlogPostQuery> = ({ data }) => (
 	<title>
 		{data.contentfulBlogPost?.title} |{' '}
-		{format(new Date(data.contentfulBlogPost?.date!), formatString)} | RobotX
+		{format(new Date(data.contentfulBlogPost?.date!), formatString)} | Antares
 	</title>
 );

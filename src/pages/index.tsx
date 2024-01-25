@@ -12,4 +12,4 @@ export const pageQuery = graphql`
 
 export default GlobalPage;
 
-export const Head = () => <title>RobotX</title>;
+export const Head = () => <title>Antares</title>;

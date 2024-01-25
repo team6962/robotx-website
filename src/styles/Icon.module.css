@@ -1,35 +1,13 @@
-.inner {
-	fill: var(--white);
+.outline .icon {
+	stroke: var(--yellow);
+	stroke-width: 15;
+	fill: none;
 }
 
-.inverted .inner {
-	fill: var(--light);
-}
-
-.dark .inner {
-	fill: var(--black);
-}
-
-.dark.inverted .inner {
-	fill: var(--dark);
-}
-
-.outer {
-	fill: var(--light);
-}
-
-.inverted .outer {
-	fill: var(--white);
-}
-
-.dark .outer {
-	fill: var(--dark);
-}
-
-.dark.inverted .outer {
-	fill: var(--black);
+.inverted .icon, .icon:hover {
+	fill: var(--yellow);
 }
 
 .glyph {
-	fill: var(--black);
+	fill: var(--dark);
 }
