@@ -12,22 +12,20 @@
 
 2.  **install dependencies**
 
-    Navigate to this folder and run `npm install`.
+    Navigate to this folder and run `yarn`.
 
 3.  **authenticate**
 
-    Sign in to Contentful and navigate to [settings > api keys > Website Main](https://app.contentful.com/spaces/bliez1sb04y6/api/keys/5TnEk5nITWXjMfU8CL3shi). Make a copy of `.env.template` as `.env` and copy the Contentful keys into that file. These are sensitive! Do not share them outside of RobotX.
+    Sign in to Contentful and navigate to [settings > api keys > Website Main](https://app.contentful.com/spaces/bliez1sb04y6/api/keys/5TnEk5nITWXjMfU8CL3shi). Make a copy of `.env.template` as `.env` and copy the Contentful keys into that file. These are sensitive! Do not share them outside of Antares.
 
 4.  **develop!**
 
-    You are now ready to begin local development. Run `npm run develop` to get started.
+    You are now ready to begin local development. Run `yarn run develop` to get started.
 
 ## 📚 Useful References
 
 -   [Gatsby Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter-ts)
 
 -   [Contentful Documentation](https://www.contentful.com/developers/docs/)
-
--   [RobotX Drive](https://drive.google.com/drive/u/1/folders/0ALyfIiWziIgnUk9PVA)
 
 -   [Pre-Gatsby source code](https://github.com/Team6962RobotiX/robotx-website/tree/572cea297ab63318ebf7e8d7779de1d90e948289)

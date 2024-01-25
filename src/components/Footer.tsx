@@ -24,7 +24,7 @@ export const Footer: React.FC = () => {
 					<span className={styles.hidden}>Email</span>
 				</a>
 			</div>
-			<span>© {new Date().getFullYear()} RobotX</span>
+			<span>© {new Date().getFullYear()} Antares</span>
 		</footer>
 	);
 };
