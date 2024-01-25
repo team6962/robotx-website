@@ -10,5 +10,5 @@
 	width: min(40rem, calc(100% - 4rem));
 	height: 100%;
 	padding: 0rem 2rem;
-	margin: 2rem auto;
+	margin: 0 auto;
 }
