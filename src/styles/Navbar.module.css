@@ -1,7 +1,7 @@
 .navbar {
 	padding: 1rem 0rem;
 
-	background-color: #252E45;
+	background-color: var(--blue);
 }
 
 .navbar > nav {
