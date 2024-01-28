@@ -21,13 +21,18 @@
 
 .navbar a {
 	text-decoration: none;
-	color: var(--light);
+	color: var(--yellow);
 	transition: color 0.3s;
 }
 
 .navbar a:hover,
 .navbar .active {
-	color: var(--white);
+	color: var(--blue);
+	background-color: var(--yellow);
+}
+
+.navbar .home:hover, .navbar .home .active {
+	background-color: transparent;
 }
 
 .navbar .home {
@@ -49,7 +54,7 @@
 
 .navbar a:not(.home) {
 	padding: 0.5rem;
-	border: 1px var(--dark) solid;
+	border: 1px var(--light) solid;
 	border-radius: 0.2rem;
 }
 
@@ -68,7 +73,7 @@
 	}
 
 	.items.active {
-		background-color: var(--black);
+		background-color: var(--dark);
 		border-radius: 0 0 0.2rem 0.2rem;
 		width: calc(100vw - 6rem);
 		padding: 1rem;

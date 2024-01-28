@@ -24,6 +24,6 @@ export const SeasonPage: React.FC<PageProps<Queries.SeasonPageQuery>> = ({ data,
 
 export const Head: HeadFC<Queries.SeasonPageQuery> = ({ data }) => (
 	<title>
-		{data.contentfulSeasonPage?.year}: {data.contentfulSeasonPage?.gameTitle} | RobotX
+		{data.contentfulSeasonPage?.year}: {data.contentfulSeasonPage?.gameTitle} | Antares
 	</title>
 );

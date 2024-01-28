@@ -8,10 +8,10 @@
 	display: block;
 
 	padding: 1rem;
-	border: 1px var(--dark) solid;
+	border: 1px var(--light) solid;
 	border-radius: 0.2rem;
 
-	color: var(--black);
+	color: var(--dark);
 	text-decoration: none;
 }
 

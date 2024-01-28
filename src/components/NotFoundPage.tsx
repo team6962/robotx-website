@@ -1,6 +1,5 @@
 import * as React from 'react';
 import { HeadFC, PageProps, useStaticQuery, graphql } from 'gatsby';
-import { PageWrapper } from '../components/PageWrapper';
 import { GatsbyImage } from 'gatsby-plugin-image';
 
 import * as styles from '../styles/NotFoundPage.module.css';
@@ -38,4 +37,4 @@ export const NotFoundPage: React.FC<PageProps> = ({ location }) => {
 	);
 };
 
-export const Head: HeadFC = () => <title>404 | RobotX</title>;
+export const Head: HeadFC = () => <title>404 | Antares</title>;
