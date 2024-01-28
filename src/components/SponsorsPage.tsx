@@ -51,7 +51,7 @@ export const SponsorsPage: React.FC<PageProps<Queries.SponsorsQuery>> = ({ data,
 	console.log(nodes);
 	return (
 		<>
-			<h1>Sponsors</h1>
+			<center></center><h1>Sponsors</h1>
 			<div className={styles.tiers}>
 				<Tier nodes={nodes} tierName="Xtragalactic" titleComponent="h2" />
 				<Tier nodes={nodes} tierName="Xtraordinary" titleComponent="h4" />
