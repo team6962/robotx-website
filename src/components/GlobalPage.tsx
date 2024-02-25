@@ -6,9 +6,6 @@ export const GlobalPage: React.FC<PageProps<Queries.GlobalPageQuery>> = ({ data,
 	const { title, content } = data.contentfulGlobalPage!;
 	return (
 		<>
-			<style>
-  			@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap');
-			</style>
 			<h1>{title}</h1>
 			<div>{renderRichText(content)}</div>
 		</>
