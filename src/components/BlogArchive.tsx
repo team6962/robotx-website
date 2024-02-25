@@ -9,6 +9,9 @@ export const BlogArchive: React.FC<PageProps<Queries.BlogArchiveQuery>> = ({ dat
 	const { nodes } = data.allContentfulBlogPost!;
 	return (
 		<>
+			<style>
+  			@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap');
+			</style>
 			<h1>Blog Archives</h1>
 			<div className={styles.archive}>
 				{nodes.map((post) => (
