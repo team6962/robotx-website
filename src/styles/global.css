@@ -16,7 +16,7 @@ body {
 	color: var(--dark);
 
 	font-size: 18px;
-	font-family: corporate-s, sans-serif;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1,
@@ -25,7 +25,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family:  muli, sans-serif;
+	font-family:  Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1,
