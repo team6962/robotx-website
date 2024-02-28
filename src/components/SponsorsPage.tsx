@@ -61,10 +61,10 @@ export const SponsorsPage: React.FC<PageProps<Queries.SponsorsQuery>> = ({ data,
 			</style>
 			<center><h1>Sponsors</h1></center>
 			<div className={styles.tiers}>
-				<Tier nodes={nodes} tierName="Xtragalactic" titleComponent="h2" />
-				<Tier nodes={nodes} tierName="Xtraordinary" titleComponent="h4" />
-				<Tier nodes={nodes} tierName="Xceptional" titleComponent="p" />
-				<Tier nodes={nodes} tierName="Xcellent" titleComponent="p" />
+				<Tier nodes={nodes} tierName="Platinum" titleComponent="h2" />
+				<Tier nodes={nodes} tierName="Gold" titleComponent="h4" />
+				<Tier nodes={nodes} tierName="Silver" titleComponent="p" />
+				<Tier nodes={nodes} tierName="Bronze" titleComponent="p" />
 			</div>
 		</>
 	);
