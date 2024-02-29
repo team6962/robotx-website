@@ -14,6 +14,10 @@ interface TierProps {
 const Tier: React.FC<TierProps> = ({ tierName, nodes, titleComponent }) =>
 	nodes.find((node) => node.tier === tierName) !== undefined ? (
 		<div className={styles.tier}>
+			<style>
+			@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap');
+
+			</style>
 			<h3>{tierName}</h3>
 			<div className={`${styles.sponsors} ${tierName in styles ? styles[tierName] : ''}`}>
 				{nodes
@@ -51,12 +55,16 @@ export const SponsorsPage: React.FC<PageProps<Queries.SponsorsQuery>> = ({ data,
 	console.log(nodes);
 	return (
 		<>
-			<center></center><h1>Sponsors</h1>
+			<style>
+			@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@200&display=swap');
+
+			</style>
+			<center><h1>Sponsors</h1></center>
 			<div className={styles.tiers}>
-				<Tier nodes={nodes} tierName="Xtragalactic" titleComponent="h2" />
-				<Tier nodes={nodes} tierName="Xtraordinary" titleComponent="h4" />
-				<Tier nodes={nodes} tierName="Xceptional" titleComponent="p" />
-				<Tier nodes={nodes} tierName="Xcellent" titleComponent="p" />
+				<Tier nodes={nodes} tierName="Platinum" titleComponent="h2" />
+				<Tier nodes={nodes} tierName="Gold" titleComponent="h4" />
+				<Tier nodes={nodes} tierName="Silver" titleComponent="p" />
+				<Tier nodes={nodes} tierName="Bronze" titleComponent="p" />
 			</div>
 		</>
 	);
